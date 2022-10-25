@@ -357,7 +357,7 @@ nav ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-image: linear-gradient(90deg, #333 56%, rgb(109, 109, 109) 100%);
+	background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -370,22 +370,51 @@ nav .navbar a {
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 14px 28px;
+	padding: 17px 28px;
 	text-decoration: none;
 	font-family: Copperplate, fantasy;
 }
+nav .navbar-right {
+	float: right;
+	padding: 9px 14px;
+  }
 nav .navbar a:hover:not(.active) {
 	background-color: #111;
 }
 nav .navbar.active {
 	background-color: #a83232;
 }
+
+/* <---- Border ---->
 nav .navbar {
 	border-right: .75px solid #bbb;
 }
 nav .navbar:first-child {
 	border-right: .75px solid #bbb;
 }
-nav .navbar:last-child {
+nav .navbar:nth-child(4) {
 	border-right: none;
 }
+*/
+
+
+.content-one {
+	background-color:rgb(170, 170, 170);
+	margin: 20px;
+	margin-top: 75px;
+	position: relative;
+	box-shadow: #333;
+	
+}
+
+.content-two {
+	background-color:green;
+	padding: 2em;
+	
+	width: 25%;
+}
+
+*/* { <--- Debug --->
+	border: 1px solid red;
+  }
+*/
