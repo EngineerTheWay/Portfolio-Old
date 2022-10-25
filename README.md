@@ -1,4 +1,4 @@
-# This repository includes copies of my portfolio website, which lists the projects I have worked on throughout my time in school and details about me.
+# This repository includes copies of my portfolio website, which lists the projects I have worked on throughout self-learning and schools, as well as details about me.
 #
 # The HTML_CSS folder includes a copy of the website in its most basic form, and was the original website I built while learning basic web development skills and documented them here as I learned.
 #
