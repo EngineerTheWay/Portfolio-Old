@@ -1,13 +1,24 @@
+/* Global Rules */
+
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+/* Navigation Bar */
 
 nav ul { 
 	list-style-type: none;
+	top: 0;
+	width: 100%;
 	margin: 0;
 	padding: 0;
+	z-index: 1;
 	overflow: hidden;
 	background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
 	position: fixed;
-	top: 0;
-	width: 100%;
 }
 
 nav .navbar {
@@ -50,8 +61,7 @@ nav .navbar-right {
 }
 
 
-
-/* <---- Border ---->
+/* Border /* This is to add a border around the buttons, commented to disable *
 nav .navbar {
 	border-right: .75px solid #bbb;
 }
@@ -63,56 +73,63 @@ nav .navbar:nth-child(4) {
 }
 */
 
+/* Footer */
+
+footer {
+	list-style-type: none;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
+}
+
+footer ul {
+	list-style-type: none;
+	padding: 5px;
+	margin: 5px;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-family: Copperplate, fantasy;
+}
+
+/* Body */
+
+h1 {
+	padding: 5px;
+	padding-left: 10px;
+}
+
+h2 {
+	padding: 5px;
+	padding-left: 10px;
+}
+
+p {
+	padding: 5px;
+	padding-left: 10px;
+}
 
 .content-one {
-	background-color:rgb(170, 170, 170);
 	margin: 20px;
 	margin-top: 75px;
 	position: relative;
 	box-shadow: #333;
 	border-radius: 5px;
+	text-align: center;
+	font-family: Copperplate, fantasy;
 	
 }
-
 
 .content-two {
 	background-color:rgb(170, 170, 170);
 	margin: 20px;
 	position: relative;
-}
-
-footer {
-	background-color:rgb(170, 170, 170);
-	margin: 20px;
-	margin-top: 10px;
-	position: relative;
-	box-shadow: #333;
 	border-radius: 5px;
-	text-align: center;
-}
-
-footer ul { 
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-footer .navbar {
-	float: left;
-	padding-left: 0;
-}
-
-footer .navbar a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 17px 28px;
-	text-decoration: none;
 	font-family: Copperplate, fantasy;
 }
 
