@@ -125,8 +125,8 @@ p {
 }
 
 .content-two {
-	background-color:rgb(216, 215, 215);
-	box-shadow: 5px 5px 5px #333;
+	background-color:rgb(180, 180, 180);
+	box-shadow: 2px 2px 3px #333;
 	margin: 20px;
 	position: relative;
 	border-radius: 5px;
