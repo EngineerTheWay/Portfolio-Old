@@ -14,15 +14,6 @@ nav .navbar {
 	float: left;
 	padding-left: 0;
 }
-nav .navbar-center {
-	text-align: center;
-	display: inline-block
-}
-
-nav .navbar-right {
-	float: right;
-	padding: 9px 14px;
-}
 
 nav .navbar a {
 	display: block;
@@ -46,6 +37,25 @@ nav .navbar-right:hover:not(.active) {
 nav .navbar.active {
 	background-color: #a83232;
 	border-radius: 25px;
+}
+
+nav .navbar-center {
+	align-items: center;
+	display: inline-block
+}
+
+nav .navbar-center a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 17px 28px;
+	text-decoration: none;
+	font-family: Copperplate, fantasy;
+}
+
+nav .navbar-right {
+	float: right;
+	padding: 9px 14px;
 }
 
 
