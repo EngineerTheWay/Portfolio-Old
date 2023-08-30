@@ -118,7 +118,6 @@ p {
 	margin: 20px;
 	margin-top: 75px;
 	position: relative;
-	box-shadow: #333;
 	border-radius: 5px;
 	text-align: center;
 	font-family: Copperplate, fantasy;
@@ -126,7 +125,8 @@ p {
 }
 
 .content-two {
-	background-color:rgb(170, 170, 170);
+	background-color:rgb(216, 215, 215);
+	box-shadow: 5px 5px 5px #333;
 	margin: 20px;
 	position: relative;
 	border-radius: 5px;
