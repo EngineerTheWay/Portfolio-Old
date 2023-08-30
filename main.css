@@ -9,10 +9,17 @@ nav ul {
 	top: 0;
 	width: 100%;
 }
+
 nav .navbar {
 	float: left;
 	padding-left: 0;
 }
+
+nav .navbar-right {
+	float: right;
+	padding: 9px 14px;
+}
+
 nav .navbar a {
 	display: block;
 	color: white;
@@ -21,16 +28,23 @@ nav .navbar a {
 	text-decoration: none;
 	font-family: Copperplate, fantasy;
 }
-nav .navbar-right {
-	float: right;
-	padding: 9px 14px;
-  }
+
 nav .navbar a:hover:not(.active) {
 	background-color: #111;
+	border-radius: 25px;
 }
+
+nav .navbar-right:hover:not(.active) {
+	background-color: #303030;
+	border-radius: 50px;
+}
+
 nav .navbar.active {
 	background-color: #a83232;
+	border-radius: 25px;
 }
+
+
 
 /* <---- Border ---->
 nav .navbar {
@@ -51,6 +65,17 @@ nav .navbar:nth-child(4) {
 	margin-top: 75px;
 	position: relative;
 	box-shadow: #333;
+	border-radius: 5px;
+	
+}
+
+h1 .content-one {
+	background-color:rgb(170, 170, 170);
+	margin: 20px;
+	margin-top: 75px;
+	position: relative;
+	box-shadow: #333;
+	border-radius: 5px;
 	
 }
 
@@ -61,7 +86,7 @@ nav .navbar:nth-child(4) {
 	width: 25%;
 }
 
-*/* { <--- Debug --->
+/* { <--- Debug --->
 	border: 1px solid red;
   }
 */
