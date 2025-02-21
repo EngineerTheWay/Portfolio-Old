@@ -30,6 +30,12 @@ nav ul {
 	overflow: hidden;
 	background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
 	position: fixed;
+		font-family: "Roboto", serif;
+  		font-optical-sizing: auto;
+  		font-weight: bold;
+  		font-style: normal;
+  		font-variation-settings:
+    			"wdth" 100;
 }
 
 nav .navbar {
@@ -104,7 +110,12 @@ footer ul {
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	font-family: Copperplate, fantasy;
+	font-family: "Roboto", serif;
+  		font-optical-sizing: auto;
+  		font-weight: bold;
+  		font-style: normal;
+  		font-variation-settings:
+    			"wdth" 100;
 }
 
 /* Body */
@@ -130,6 +141,12 @@ p {
 	position: relative;
 	border-radius: 5px;
 	text-align: center;
+	font-family: "Roboto", serif;
+  		font-optical-sizing: auto;
+  		font-weight: normal;
+  		font-style: normal;
+  		font-variation-settings:
+    			"wdth" 100;
 	
 }
 
@@ -139,7 +156,12 @@ p {
 	margin: 20px;
 	position: relative;
 	border-radius: 5px;
-	font-family: Copperplate, fantasy;
+	font-family: "Roboto", serif;
+  		font-optical-sizing: auto;
+  		font-weight: normal;
+  		font-style: normal;
+  		font-variation-settings:
+    			"wdth" 100;
 }
 
 /* { <--- Debug --->
