@@ -43,7 +43,6 @@ nav .navbar a {
 	text-align: center;
 	padding: 17px 28px;
 	text-decoration: none;
-	font-family: Copperplate, fantasy;
 }
 
 nav .navbar a:hover:not(.active) {
