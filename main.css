@@ -12,7 +12,7 @@ body {
 .roboto-main {
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: normal;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
@@ -131,7 +131,6 @@ p {
 	position: relative;
 	border-radius: 5px;
 	text-align: center;
-	font-family: Copperplate, fantasy;
 	
 }
 
