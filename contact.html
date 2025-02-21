@@ -1,53 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<header id="pageHeader">
-		<!-- Meta Data  -->
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Caleb - Contact</title>
-		<!-- Stylesheet  -->
-		<link rel="stylesheet" href="normalize.css">
-		<link rel="stylesheet" href="main.css">
-</header>
+    <!-- Meta Data  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb - Contact Info</title>
+	<!-- Normalize CSS  -->
+	<link rel="stylesheet" href="normalize.css">
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- JavaScript  -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
-	<nav>
-		<ul>
-			<li class="navbar"><a href="index.html">Home</a></li>
-			<li class="navbar"><a href="about.html">About</a></li>
-			<li class="navbar"><a class="navbar active" href="contact.html">Contact</a></li>
-			<li class="navbar"><a href="projects.html">Projects</a></li>
-			<li class="navbar-right"><a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank"><img class="navbar-right" src="./media/linkedin.png"></a></li>
-			<li class="navbar-right"><a href="https://github.com/EngineerTheWay" target="_blank"><img class="navbar-right" src="./media/github.png" height="14" width="50"></a></li>	
-		</ul>
-	</nav>
+    <header>
+        <!-- Name  -->
+        <div class="header-left">
+            <a href="index.html">
+                <span class="white">calebway.</span><span class="red">(portfol)</span><span class="white">io</span>
+            </a>
+        </div>
 
-	<main class="content-one">
-		<h1>Socials and Contact Information</h1>
-	</main>
+        <!-- Navigation Links  -->
+        <nav class="header-center">
+            <ul>
+                <li class="navbar"><a href="index.html">About Me</a></li>
+                <li class="navbar"><a href="resume.html">Resume</a></li>
+                <li class="navbar"><a href="projects.html">Projects</a></li>
+                <li class="navbar"><a class="navbar active" href="contact.html">Contact Info</a></li>
+            </ul>
+        </nav>
 
-	<main class="content-two">
-		<h1>Socials</h1>
-		<h2>LinkedIn</h2>
-		<h2>GitHub</h2>
-		<h2>Twitter</h2>
-	</main>
+        <!-- External Links  -->
+        <div class="header-right">
+            <ul>
+                <li class="navbar">
+                    <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank">
+                        <img src="./media/linkedin.png" alt="LinkedIn">
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="https://github.com/EngineerTheWay" target="_blank">
+                        <img src="./media/github.png" alt="GitHub" height="13" width="50">
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-	<main class="content-two">
-	<h1>Contact</h1>
-	<h2>Email</h2>
-	</main>
+        <!-- Mobile Nav Menu  -->
+        <div id="hamburger-icon" onclick="toggleMobileMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <nav class="mobile-menu">
+                <ul>
+                    <li class="mobile-navbar"><a href="index.html">About Me</a></li>
+                    <li class="mobile-navbar"><a href="resume.html">Resume</a></li>
+                    <li class="mobile-navbar"><a href="projects.html">Projects</a></li>
+                    <li class="mobile-navbar"><a class="mobile-navbar active" href="contact.html">Contact Info</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+	<!-- Page Content  -->
+    <main>
+		<content>
+			<div class="content-divider">
+				<div><h1>Contact Information</h1></div>
+                
+				<div class="page-break"></div>
+
+                <div class="content-body">
+                    <div class="tile">
+                        <h1>Contact Information</h1>
+                        <p><span class="bold">Email:</span> contact@calebway.io</p>
+                    </div>
+                    <div class="tile-container">
+                        <div class="tile-container-tile"  onclick="openInNewTab('https://www.linkedin.com/in/caleb-way-51b202247/');">
+                            <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank" class="link-remove-format"><h1>LinkedIn</h1></a>
+                        </div>
+                        <div class="tile-container-tile" onclick="openInNewTab('https://github.com/EngineerTheWay/');">
+                            <a href="https://github.com/EngineerTheWay" target="_blank" class="link-remove-format"><h1>Github</h1></a>
+                        </div>
+                    </div>
+                </div>
+			</div>
 	
-</body>
+			
+		</content>
+	</main>
 
-<footer>
-	<ul>
-		<li>© engineertheway.com | Caleb Way</li>
-	</ul>
-</footer>
+	<!-- Footer  -->
+    <footer>
+        <p>© 2025 Caleb Way. All Rights Reserved. | calebway.io</p>
+    </footer>
 </body>
 
 </html>

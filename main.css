@@ -1,139 +1,478 @@
 /* Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-html,
 body {
-    margin:0;
-    padding:0;
-    height:100%;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Navigation Bar */
+/* Utility Classes */
+.red { color: #a83232; }
+.white { color: white; }
+.bold { font-weight: bold; }
+.link-remove-format { text-decoration: none; color: inherit; }
+.reduce-pad { padding: 10px;}
 
-nav ul { 
-	list-style-type: none;
-	top: 0;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	z-index: 1;
-	overflow: hidden;
-	background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
-	position: fixed;
+/* Header / Navigation Bar */
+header {
+    padding: 0px 20px;
+    background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 3px 3px 3px #333;
 }
 
-nav .navbar {
-	float: left;
-	padding-left: 0;
+header a {
+    text-decoration: none;
 }
 
-nav .navbar a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 17px 28px;
-	text-decoration: none;
-	font-family: Copperplate, fantasy;
+/* Left Section */
+header .header-left {
+    padding: 5px 0px;
+    font-weight: bold;
+    font-size: 32px;
+    color: white;
+    white-space: nowrap;
 }
 
-nav .navbar a:hover:not(.active) {
-	background-color: #111;
-	border-radius: 25px;
+header .header-left a {
+    text-decoration: none;
 }
 
-nav .navbar-right:hover:not(.active) {
-	background-color: #303030;
-	border-radius: 50px;
+/* Center Section */
+header nav.header-center {
+    flex: 1;
+    text-align: center;
 }
 
-nav .navbar.active {
-	background-color: #a83232;
-	border-radius: 25px;
+header nav.header-center ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0px;
+    display: inline-flex;
+    white-space: nowrap;
 }
 
-nav .navbar-center {
-	align-items: center;
-	display: inline-block
+header nav.header-center ul li {
+    margin: 0 10px;
 }
 
-nav .navbar-right {
-	float: right;
-	padding: 9px 14px;
+/* Right Section */
+header .header-right {
+    /* keep default sizing */
 }
 
-
-/* Border /* This is to add a border around the buttons, commented to disable *
-nav .navbar {
-	border-right: .75px solid #bbb;
-}
-nav .navbar:first-child {
-	border-right: .75px solid #bbb;
-}
-nav .navbar:nth-child(4) {
-	border-right: none;
-}
-*/
-
-/* Footer */
-
-footer {
-	list-style-type: none;
-	bottom: 0;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-	background-image: linear-gradient(90deg, #333 70%, rgb(109, 109, 109) 100%);
+header .header-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 0px;
+    display: flex;
 }
 
-footer ul {
-	list-style-type: none;
-	padding: 5px;
+header .header-right ul li {
+    margin: 0 5px;
+}
+
+header .navbar a {
+    padding: 15px 15px;
+    color: white;
+    font-weight: bold;
+}
+
+header .navbar.active {
+    background-color: #a83232;
+    border-radius: 25px;
+}
+
+header .navbar a:hover:not(.active) {
+    background-color: #111;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+/* Mobile Menu Icon */
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* 3 Bars for Transforming Hamburger Icon */
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* Hamburger Menu */
+.open nav.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+nav.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(180, 180, 180);
+    overflow: visible;
+    box-shadow: 3px 3px 3px #333;
+    z-index: 999;
+
+}
+
+header .mobile-navbar a {
+    padding: 15px 20px; /* reduced padding so it's more uniform */
+    font-weight: bold;
+    color: black;
+    display: block; 
+    width: 100%; 
+	text-wrap: nowrap;
+}
+
+header .mobile-navbar.active {
+    background-color: #a83232;
+    border-radius: 25px;
+    color: white;
+}
+
+header .mobile-navbar a:hover:not(.active) {
+    background-color: #333;
+    color: white;
+    border-radius: 25px;
+}
+
+nav.mobile-menu.open {
+    display: flex !important;
+}
+
+nav.mobile-menu li {
+    list-style: none;
+    border-radius: 25px;
+    width: 100%; 
+    text-align: center;
 	margin: 5px;
-	display: block;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	font-family: Copperplate, fantasy;
+}
+
+/* Hide/Unhide Elements for Mobile View */
+@media only screen and (max-width: 1000px) {
+    .header-center,
+    .header-right {
+        display: none;  /* hide standard nav/external links for mobile viewing */
+    }
+
+    #hamburger-icon {
+        display: block;
+    }
 }
 
 /* Body */
-
-h1 {
-	padding: 5px;
-	padding-left: 10px;
+main h1, h2, h3, p {
+    padding: 10px;
+	padding-left: 20px;
+    padding-right: 20px;
 }
 
-h2 {
-	padding: 5px;
-	padding-left: 10px;
+h1 a, h2 a, h3 a {
+    text-decoration: none;
 }
 
-p {
-	padding: 5px;
-	padding-left: 10px;
+/* Content Containers */
+main {
+	/* Creates main content flexbox */
+    flex: 1;
 }
 
-.content-one {
-	margin: 20px;
-	margin-top: 75px;
-	position: relative;
-	border-radius: 5px;
-	text-align: center;
-	font-family: Copperplate, fantasy;
+.content {
+	/* Ensures main content flexbox and page is filled; pushes footer to bottom of page when lacking sufficient content */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Page Intro Container // Stacks Vertically */
+.content-divider {
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-divider > div {
+    width: 100%;
+    text-align: center;
+}
+
+.page-break {
+    
+	max-width: 750px;
+    height: 5px; 
+    background-color: #333; 
+    border-radius: 5px; 
+	display: flex;
+	flex-direction: row;
+}
+
+.page-break-short {
+    
+	max-width: 350px;
+    height: 2px; 
+    background-color: #333; 
+    border-radius: 5px; 
+	display: flex;
+	flex-direction: row;
+}
+
+.page-break-thin {
+    
+	max-width: 200px;
+    height: 1px; 
+    background-color: #333; 
+    border-radius: 5px; 
+	display: flex;
+	flex-direction: row;
+}
+
+/* Content Body Container // Stacks Horizontally */
+.content-body {
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content-body-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: fit-content;
+    min-width: 350px;
+}
+
+.content-body-wrap > div.tile {
+    box-shadow: none;
+    flex: 1 1 335px;
+    width: 350px;
+    max-width: 350px; 
+    min-width: 325px; 
+    cursor: default;
+    transform: none;
+}
+
+.content-body-wrap > div.white-tile-large, div.white-tile, div.tile {
+    margin: 10px;
+}
+
+.content-body-wrap:hover {
+    transform: scale(1.01);
+    transition: .05s;
+}
+
+
+/* Content Containers */
+.content-body > div {
+    /* No specific styles */
+}
+
+/* No Background Content Containers */
+.white-tile {
+    width: 350px;
+    height: 350px;
+    min-width: 350px;
+    margin: 20px;
+    text-align: left;
+}
+
+.white-tile img {
+	box-shadow: 2px 2px 3px #333;
+	border-radius: 25px;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 	
 }
 
-.content-two {
-	background-color:rgb(180, 180, 180);
-	box-shadow: 2px 2px 3px #333;
-	margin: 20px;
-	position: relative;
-	border-radius: 5px;
-	font-family: Copperplate, fantasy;
+.white-tile-large {
+    flex: 1 1 350px;
+    width: 725px;
+    max-width: 725px; 
+    min-width: 350px; 
+    min-height: 350px;
+    margin: 20px;
+    text-align: left;
 }
 
-/* { <--- Debug --->
-	border: 1px solid red;
-  }
-*/
+.white-tile-large p, .white-tile p,
+.white-tile-large h1, .white-tile h1,
+.white-tile-large h2, .white-tile h2 {
+    margin: 5px;
+}
+
+/* Modifier Classes for Tiles */
+.bordered {
+    border: 2px solid #a83232;
+    border-radius: 25px;
+}
+
+/* Content "Tile" Containers (w/ Background and Animation) */
+/* Ensure the link covers the entire tile */
+
+/* Tile Formatting */
+.tile-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.default-cursor {
+    text-decoration: none;
+    cursor: default;
+}
+
+.tile {
+    background-color: rgb(180, 180, 180);
+    box-shadow: 2px 2px 3px #333;
+	border-radius: 25px;
+    width: 350px;
+    min-width: 350px;
+    height: 350px;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tile a {
+  	width:100%;
+  	height:100%;
+  	z-index: 9999;
+}
+
+.tile:hover {
+    transform: scale(1.01);
+    transition: .05s;
+}
+
+.tile-small {
+    background-color: rgb(180, 180, 180);
+    box-shadow: 2px 2px 3px #333;
+	border-radius: 25px;
+    width: 350px;
+    min-width: 350px;
+    height: 150px;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tile-small:hover {
+    transform: scale(1.01);
+    transition: .05s;
+}
+
+/* Tile Containers for mini/smaller Content Tiles that stack */
+/* This is the container for the smaller tiles */
+.tile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    width: 350px;
+    min-width: 350px;
+    margin: 20px;
+}
+
+/* Embedded tiles that stack */
+.tile-container-tile {
+    background-color: rgb(180, 180, 180);
+    box-shadow: 2px 2px 3px #333;
+	border-radius: 25px;
+    width: 100%;
+    height: 160px;
+    min-width: 350px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tile-container-tile:hover {
+    transform: scale(1.01);
+    transition: .05s;
+}
+
+.tile-container-tile-mini {
+    background-color: rgb(180, 180, 180);
+    box-shadow: 2px 2px 3px #333;
+	border-radius: 25px;
+    width: 100%;
+    height: 100px;
+    min-width: 350px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tile-container-tile-mini:hover {
+    transform: scale(1.01);
+    transition: .05s;
+}
+
+/* Footer */
+footer {
+    list-style-type: none;
+    width: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p {
+	padding: 5px;
+	margin: 0px;
+}

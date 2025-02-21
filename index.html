@@ -1,44 +1,135 @@
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <html lang="en">
+
 <head>
-	<header id="pageHeader">
-		<!-- Meta Data  -->
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Caleb - Home</title>
-		<!-- Stylesheet  -->
-		<link rel="stylesheet" href="normalize.css">
-		<link rel="stylesheet" href="main.css">
-	</header>
+    <!-- Meta Data  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb - About Me</title>
+	<!-- Normalize CSS  -->
+	<link rel="stylesheet" href="normalize.css">
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- JavaScript  -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
-	<nav>
-		<ul>
-			<li class="navbar"><a class="navbar active" href="index.html">Home</a></li>
-			<li class="navbar"><a href="about.html">About</a></li>
-			<li class="navbar"><a href="contact.html">Contact</a></li>
-			<li class="navbar"><a href="projects.html">Projects</a></li>
-			<li class="navbar-right"><a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank"><img class="navbar-right" src="./media/linkedin.png"></a></li>
-			<li class="navbar-right"><a href="https://github.com/EngineerTheWay" target="_blank"><img class="navbar-right" src="./media/github.png" height="14" width="50"></a></li>	
-		</ul>
-	</nav>
-	<main class="content-one">
-		<h1>Welcome to my Portfolio!</h1>
-	</main>
+    <header>
+        <!-- Name  -->
+        <div class="header-left">
+            <a href="index.html">
+                <span class="white">calebway.</span><span class="red">(portfol)</span><span class="white">io</span>
+            </a>
+        </div>
 
-	<main class="content-two">
-		<p>This is a paragraph.</p>
-		<p>This is another paragraph.</p>
-	</main>
-	
+        <!-- Navigation Links  -->
+        <nav class="header-center">
+            <ul>
+                <li class="navbar"><a class="navbar active" href="index.html">About Me</a></li>
+                <li class="navbar"><a href="resume.html">Resume</a></li>
+                <li class="navbar"><a href="projects.html">Projects</a></li>
+                <li class="navbar"><a href="contact.html">Contact Info</a></li>
+            </ul>
+        </nav>
+
+        <!-- External Links  -->
+        <div class="header-right">
+            <ul>
+                <li class="navbar">
+                    <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank">
+                        <img src="./media/linkedin.png" alt="LinkedIn">
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="https://github.com/EngineerTheWay" target="_blank">
+                        <img src="./media/github.png" alt="GitHub" height="13" width="50">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile Nav Menu  -->
+        <div id="hamburger-icon" onclick="toggleMobileMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <nav class="mobile-menu">
+                <ul>
+                    <li class="mobile-navbar"><a class="mobile-navbar active" href="index.html">About Me</a></li>
+                    <li class="mobile-navbar"><a href="resume.html">Resume</a></li>
+                    <li class="mobile-navbar"><a href="projects.html">Projects</a></li>
+                    <li class="mobile-navbar"><a href="contact.html">Contact Info</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Content  -->
+    <main>
+        <content>
+            <div class="content-divider">
+                <div>
+                    <h1>Caleb Way</h1>
+                </div>
+                
+				<div class="page-break"></div>
+
+                <div>
+                    <h3>MBA Candidate | Air Force Veteran | IT & Business Strategy</h3>
+                </div>
+
+                <div class="content-body">
+                    <div class="white-tile">
+                        <img src="./media/me.jpg" alt="A picture of me" height="350" width="350">
+                    </div>
+                    
+                    <div class="white-tile-large bordered">
+                        <h1>About Me</h1>
+                        <p>Hi, I’m Caleb! I’m a former Air Force linguist and intelligence analyst preparing for my transition into the private sector. I’m passionate about the intersection of business and technology, and I’m excited to bring my unique perspective to my next employer.</p>
+                        <p>With nine years of professional experience working in military intelligence analysis, offensive cyberspace operations, and foreign language classroom instruction, I bring a both a strong foundation in leadership and a unique problem-solving perspective.</p>
+                        <p>I’m passionate about the impact IT innovation can have on organizations. Throughout my career in the military, I worked on numerous projects that leveraged IT tools and systems to overhaul workflows and substantially increase administrative efficiency.</p>
+                    </div>
+                </div>
+
+                <div class="page-break-thin"></div>
+    
+                <div class="content-body">
+                    <div class="white-tile-large bordered">
+                        <h1>Professional Objectives</h1>
+                        <p>I’m looking forward to landing a role in the private sector at the intersection of business and IT—where I can expand my technical skillset while applying my management experience to help my team solve complex problems and create innovative new products. I'm a committed life-long learner and value roles where I can expand my skillset on a daily basis.</p>
+                        <p><span class="bold">Technical Roles:</span> Words</p>
+                        <p><span class="bold">Business Roles:</span> Words</p>
+                    </div>
+                    <div class="tile-container">
+                        <div class="tile-container-tile-mini" onclick="navigateToURL('resume.html');">
+                            <h1>Resume</h1>
+                        </div>
+                        <div class="tile-container-tile-mini" onclick="navigateToURL('contact.html');">
+                            <h1>Contact Information</h1>
+                        </div>
+                        <div class="tile-container-tile-mini" onclick="navigateToURL('projects.html');">
+                            <h1>Projects</h1>
+                        </div>
+                    </div>
+                </div>
+				
+            </div>
+
+            
+        </content>
+    </main>
+
+    <!-- Footer  -->
+    <footer>
+        <p>© 2025 Caleb Way. All Rights Reserved. | calebway.io</p>
+    </footer>
 </body>
 
-<footer>
-	<ul>
-		<li>© engineertheway.com | Caleb Way</li>
-	</ul>
-</footer>
 </html>

@@ -1,80 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<header id="pageHeader">
-		<!-- Meta Data  -->
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Caleb - Projects</title>
-		<!-- Stylesheet  -->
-		<link rel="stylesheet" href="normalize.css">
-		<link rel="stylesheet" href="main.css">
-</header>
+    <!-- Meta Data  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb - Projects</title>
+	<!-- Normalize CSS  -->
+	<link rel="stylesheet" href="normalize.css">
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- JavaScript  -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
-	<nav>
-		<ul>
-			<li class="navbar"><a  href="index.html">Home</a></li>
-			<li class="navbar"><a href="about.html">About</a></li>
-			<li class="navbar"><a href="contact.html">Contact</a></li>
-			<li class="navbar"><a class="navbar active" href="projects.html">Projects</a></li>
-			<li class="navbar-right"><a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank"><img class="navbar-right" src="./media/linkedin.png"></a></li>
-			<li class="navbar-right"><a href="https://github.com/EngineerTheWay" target="_blank"><img class="navbar-right" src="./media/github.png" height="14" width="50"></a></li>	
-		</ul>
-	</nav>
+    <header>
+        <!-- Name  -->
+        <div class="header-left">
+            <a href="index.html">
+                <span class="white">calebway.</span><span class="red">(portfol)</span><span class="white">io</span>
+            </a>
+        </div>
 
-	<main class="content-one">
-		<h1>Projects</h1>
+        <!-- Navigation Links  -->
+        <nav class="header-center">
+            <ul>
+                <li class="navbar"><a href="index.html">About Me</a></li>
+                <li class="navbar"><a href="resume.html">Resume</a></li>
+                <li class="navbar"><a class="navbar active" href="projects.html">Projects</a></li>
+                <li class="navbar"><a href="contact.html">Contact Info</a></li>
+            </ul>
+        </nav>
+
+        <!-- External Links  -->
+        <div class="header-right">
+            <ul>
+                <li class="navbar">
+                    <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank">
+                        <img src="./media/linkedin.png" alt="LinkedIn">
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="https://github.com/EngineerTheWay" target="_blank">
+                        <img src="./media/github.png" alt="GitHub" height="13" width="50">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile Nav Menu  -->
+        <div id="hamburger-icon" onclick="toggleMobileMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <nav class="mobile-menu">
+                <ul>
+                    <li class="mobile-navbar"><a href="index.html">About Me</a></li>
+                    <li class="mobile-navbar"><a href="resume.html">Resume</a></li>
+                    <li class="mobile-navbar"><a class="mobile-navbar active" href="projects.html">Projects</a></li>
+                    <li class="mobile-navbar"><a href="contact.html">Contact Info</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+	<!-- Page Content  -->
+    <main>
+		<content>
+			<div class="content-divider">
+				<div><h1>Projects</h1></div>
+                
+				<div class="page-break"></div>
+
+                <div class="content-body">
+                    <div class="tile" onclick="openInNewTab('https://github.com/EngineerTheWay/Portfolio');">
+                        <h1>Portfolio Site</h1>
+                        <p>View the source code of this portfolio website on my Github!</p>
+                        <p>This project demonstrates my mastery of:</p>
+                        <p><span class="bold">HTML/CSS</span></p>
+                    </div>
+    
+                    <div class="tile" onclick="openInNewTab('https://github.com/EngineerTheWay/CMSC115');">
+                        <a href="https://github.com/EngineerTheWay/CMSC115" target="_blank" class="tile-link">
+                            <h1>Customer Database</h1>
+                        </a>
+                        <p>This is a basic Java program that takes user input</p>
+                        <p>This project demonstrates my mastery of:</p>
+                        <p><span class="bold">Basic Java and Object-Oriented Programming</span></p>
+                    </div>
+                </div>
+			</div>
+		</content>
 	</main>
 
-	<main class="content-two">
-		<h1><a href="https://github.com/EngineerTheWay/CMSC115" target="_blank">Customer Database</a></h1>
-		<p>The following project was completed as part of CMSC115.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CSMSC215</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CSMSC310</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>SDEV210</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC315</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC320</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC330</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC335</h1>
-		<p>Placeholder.</p>
-	</main>
-	
+	<!-- Footer  -->
+    <footer>
+        <p>© 2025 Caleb Way. All Rights Reserved. | calebway.io</p>
+    </footer>
 </body>
 
-<footer>
-	<ul>
-		<li>© engineertheway.com | Caleb Way</li>
-	</ul>
-</footer>
-</body>
 </html>
