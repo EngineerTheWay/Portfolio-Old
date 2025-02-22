@@ -17,31 +17,52 @@
 
 <body>
 	<header>
-		<div id="me">CalebWay<span class="red">.</span>io</div>
-		<nav>
+
+		<!-- Name  -->
+		<div id="me" class="header-left">CalebWay<span class="red">.</span>io</div>
+
+		<!-- Navigation Links  -->
+		<div class="header-center">
 			<ul>
 				<li class="navbar"><a class="navbar active" href="index.html">About Me</a></li>
 				<li class="navbar"><a href="resume.html">Experience & Resume</a></li>
 				<li class="navbar"><a href="contact.html">Contact Information</a></li>
-				<li class="navbar"><a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank"><img class="navbar" src="./media/linkedin.png"></a></li>
-				<li class="navbar"><a href="https://github.com/EngineerTheWay" target="_blank"><img class="navbar" src="./media/github.png" height="13" width="50"></a></li>	
 			</ul>
-		</nav>
+		</div>
+
+		<!-- External Links  -->
+		<div class="header-right">
+			<ul>
+			  <li class="navbar">
+				<a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank">
+				  <img src="./media/linkedin.png" alt="LinkedIn">
+				</a>
+			  </li>
+			  <li class="navbar">
+				<a href="https://github.com/EngineerTheWay" target="_blank">
+				  <img src="./media/github.png" alt="GitHub" height="13" width="50">
+				</a>
+			  </li>
+			</ul>
+		  </div>
+
+		<!-- Mobile Nav Menu  -->
 		<div id="hamburger-icon" onclick="toggleMobileMenu()">
 			<div class="bar1"></div>
 			<div class="bar2"></div>
 			<div class="bar3"></div>
 			<ul class="mobile-menu">
-				<li><a href="index.html">About Me</a></li>
-				<li><a href="resume.html">Experience & Resume</a></li>
-				<li><a href="contact.html">Contact Information</a></li>
-				<li><a href="https://www.linkedin.com/in/caleb-way-51b202247/">LinkedIn</a></li>
-				<li><a href="https://github.com/EngineerTheWay">Github</a></li>
+				<li class="mobile-navbar"><a class="mobile-navbar active" href="index.html">About Me</a></li>
+				<li class="mobile-navbar"><a href="resume.html">Experience & Resume</a></li>
+				<li class="mobile-navbar"><a href="contact.html">Contact Information</a></li>
+				<li class="mobile-navbar"><a href="https://www.linkedin.com/in/caleb-way-51b202247/">LinkedIn</a></li>
+				<li class="mobile-navbar"><a href="https://github.com/EngineerTheWay">Github</a></li>
 			</ul>
 		</div>
+
 	</header>
 	<script src="index.js"></script>
-	
+
 	<main class="content-one">
 		<h1>Caleb Way</h1>
 		<p>MBA Candidate | Veteran | IT & Business Strategy</p>
@@ -52,10 +73,13 @@
 		<p>This is another paragraph.</p>
 	</main>
 	
+	<div class="container"></div>
+
 </body>
 <footer>
 	<ul>
 		<li>© 2025 Caleb Way. All Rights Reserved. | calebway.io</li>
 	</ul>
 </footer>
+</div>
 </html>

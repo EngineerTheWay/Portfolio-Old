@@ -17,75 +17,65 @@
 
 <body>
 	<header>
-		<div id="me">CalebWay<span class="red">.</span>io</div>
-		<nav>
+
+		<!-- Name  -->
+		<div id="me" class="header-left">CalebWay<span class="red">.</span>io</div>
+
+		<!-- Navigation Links  -->
+		<div class="header-center">
 			<ul>
 				<li class="navbar"><a href="index.html">About Me</a></li>
 				<li class="navbar"><a class="navbar active" href="resume.html">Experience & Resume</a></li>
 				<li class="navbar"><a href="contact.html">Contact Information</a></li>
-				<li class="navbar"><a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank"><img class="navbar" src="./media/linkedin.png"></a></li>
-				<li class="navbar"><a href="https://github.com/EngineerTheWay" target="_blank"><img class="navbar" src="./media/github.png" height="13" width="50"></a></li>	
 			</ul>
-		</nav>
-		<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+		</div>
+
+		<!-- External Links  -->
+		<div class="header-right">
+			<ul>
+			  <li class="navbar">
+				<a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank">
+				  <img src="./media/linkedin.png" alt="LinkedIn">
+				</a>
+			  </li>
+			  <li class="navbar">
+				<a href="https://github.com/EngineerTheWay" target="_blank">
+				  <img src="./media/github.png" alt="GitHub" height="13" width="50">
+				</a>
+			  </li>
+			</ul>
+		  </div>
+
+		<!-- Mobile Nav Menu  -->
+		<div id="hamburger-icon" onclick="toggleMobileMenu()">
 			<div class="bar1"></div>
 			<div class="bar2"></div>
 			<div class="bar3"></div>
 			<ul class="mobile-menu">
-				<li><a href="index.html">About Me</a></li>
-				<li><a href="resume.html">Experience & Resume</a></li>
-				<li><a href="contact.html">Contact Information</a></li>
-				<li><a href="https://www.linkedin.com/in/caleb-way-51b202247/">LinkedIn</a></li>
-				<li><a href="https://github.com/EngineerTheWay">Github</a></li>
+				<li class="mobile-navbar"><a href="index.html">About Me</a></li>
+				<li class="mobile-navbar"><a class="mobile-navbar active" href="resume.html">Experience & Resume</a></li>
+				<li class="mobile-navbar"><a href="contact.html">Contact Information</a></li>
+				<li class="mobile-navbar"><a href="https://www.linkedin.com/in/caleb-way-51b202247/">LinkedIn</a></li>
+				<li class="mobile-navbar"><a href="https://github.com/EngineerTheWay">Github</a></li>
 			</ul>
 		</div>
+
 	</header>
 	<script src="index.js"></script>
 	
-	<main class="content-one">
+	<div class="content-one">
 		<h1>Projects</h1>
-	</main>
+	</div>
 
-	<main class="content-two">
+	<div class="content-two">
 		<h1><a href="https://github.com/EngineerTheWay/CMSC115" target="_blank">Customer Database</a></h1>
 		<p>The following project was completed as part of CMSC115.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CSMSC215</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CSMSC310</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>SDEV210</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC315</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC320</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC330</h1>
-		<p>Placeholder.</p>
-	</main>
-
-	<main class="content-two">
-		<h1>CMSC335</h1>
-		<p>Placeholder.</p>
-	</main>
+	</div>
 	
+	<!-- Adds space for footer  -->
+	<div class="container"></div> 
+	<!-- Adds space for footer  -->
+
 </body>
 
 <footer>

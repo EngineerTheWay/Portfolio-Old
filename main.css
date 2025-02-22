@@ -8,23 +8,20 @@
 
 body {
 	font-family: "Roboto", serif; font-optical-sizing: auto; font-weight: normal; font-style: normal; font-variation-settings: "wdth" 100;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
-/* Header / Navigation Bar */
+.red { color:#a83232; }
+.white { color:white; }
+
+/* Header / Navigation Bar */]
 
 #me {
 	font-weight: bold;
 	font-size: 35px;
-	display: flex;
-	align-items: center;
-	color: antiquewhite;
-}
-
-.red { color:#a83232; }
-.white { color:antiquewhite; }
-
-header a {
-    text-decoration: none;
+	color: white;
 }
 
 header { 
@@ -35,30 +32,54 @@ header {
     justify-content: space-between;
 }
 
-header ul { 
+header a {
+    text-decoration: none;
+}
+
+.header-left {
+	color: antiquewhite;
+	padding: 2px 0px;
+}
+
+.header-center {
+	flex: 1;
+	text-align: center;
+  }
+
+.header-center ul { 
     list-style: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-weight: bold;
     margin: 0;
-    padding: 0;
+    padding: 15px 0px;
+	display: inline-flex;
 	white-space: nowrap;
+
 }
 
-header ul a { 
-    color: white;
-}
-
-header li {
-    padding: 0;
-    margin-left: 5px;
-	flex-wrap: nowrap;
-}
+.header-center ul li {
+	margin: 0 10px;
+  }
+  
+  /* Right Section */
+  .header-right {
+	/* keep default sizing */
+  }
+  
+  .header-right ul {
+	list-style: none;
+	margin: 0;
+	padding: 15px 0px;
+	display: flex;
+  }
+  
+  .header-right ul li {
+	margin: 0 5px;
+  }
+  
 
 header .navbar a {
     padding: 15px 20px;
+	color: white;
+	font-weight: bold;
 }
 
 header .navbar.active {
@@ -73,7 +94,7 @@ header .navbar a:hover:not(.active) {
 }
 
 
-/* Mobile Menu */
+/* Mobile Icon Menu */
 
 #hamburger-icon {
 	margin: auto 0;
@@ -88,21 +109,21 @@ header .navbar a:hover:not(.active) {
 	margin: 6px 0;
 	transition: 0.4s;
 }
-  
+/* 3 Bars for Transforming Hamburger Icon */
   .open .bar1 {
 	-webkit-transform: rotate(-45deg) translate(-6px, 6px);
 	transform: rotate(-45deg) translate(-6px, 6px);
   }
-  
   .open .bar2 {
 	opacity: 0;
   }
-  
   .open .bar3 {
 	-webkit-transform: rotate(45deg) translate(-6px, -8px);
 	transform: rotate(45deg) translate(-6px, -8px);
   }
   
+
+/* Hamburger Menu */
   .open .mobile-menu {
 	display: flex;
 	flex-direction: column;
@@ -113,6 +134,7 @@ header .navbar a:hover:not(.active) {
   .mobile-menu {
 	display: none;
 	position: absolute;
+
 	top: 50px;
 	left: 0;
 	height: 305px;
@@ -122,19 +144,45 @@ header .navbar a:hover:not(.active) {
 	box-shadow: 2px 2px 3px #333;
 	z-index: 999;
   }
-  
+
+header .mobile-navbar a {
+    padding: 15px 20px;
+	font-weight: bold;
+	color: black;
+}
+
+header .mobile-navbar.active {
+    background-color: #a83232;
+    border-radius: 25px;
+	transform: scale(1.1);
+	color: white;
+}
+
+header .mobile-navbar a:hover:.active {
+    transform: scale(1.1);
+}
+
+header .mobile-navbar a:hover:not(.active) {
+    background-color: #333;
+	color: white;
+    border-radius: 25px;
+	transition: 0.3s;
+}
+
   .mobile-menu.open {
     display: flex !important;
 }
 
   .mobile-menu li {
+	list-style: none;
 	margin: 20px;
-	
   }
 
+/* Hide/Unhide Elements for Mobile View */
   @media only screen and (max-width: 720px) {
-	header nav {
-	  display: none;
+	.header-center,
+	.header-right {
+	  display: none;  /* hide standard nav/external links for mobile viewing */
 	}
   
 	#hamburger-icon {
@@ -147,18 +195,16 @@ header .navbar a:hover:not(.active) {
 
 footer {
 	list-style-type: none;
-	bottom: 0;
-	margin: 0;
-	padding-top: 0;
 	width: 100%;
 	overflow: hidden;
-	position: fixed; bottom:0;
+	flex-shrink: 0;
+    flex-direction: column;
 	background-color: #333;
 }
 
 footer ul {
 	list-style-type: none;
-	padding: 5px;
+	padding: 3px;
 	margin: 5px;
 	display: block;
 	color: white;
@@ -184,12 +230,19 @@ p {
 	padding-left: 10px;
 }
 
+.container {
+	flex: 1;
+}
+
+
 .content-one {
 	margin: 20px;
 	position: relative;
 	border-radius: 5px;
 	text-align: center;
   	font-weight: bold;
+	flex-direction: column;
+	flex
 }
 
 .content-two {
@@ -198,6 +251,7 @@ p {
 	margin: 20px;
 	position: relative;
 	border-radius: 5px;
+	flex-shrink: 0;
 }
 
 /* { <--- Debug --->
