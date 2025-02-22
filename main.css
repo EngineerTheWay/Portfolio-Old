@@ -16,13 +16,7 @@ body {
 .red { color:#a83232; }
 .white { color:white; }
 
-/* Header / Navigation Bar */]
-
-#me {
-	font-weight: bold;
-	font-size: 35px;
-	color: white;
-}
+/* Header / Navigation Bar */
 
 header { 
     padding: 0px 20px;
@@ -37,8 +31,10 @@ header a {
 }
 
 .header-left {
-	color: antiquewhite;
 	padding: 2px 0px;
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
 }
 
 .header-center {
