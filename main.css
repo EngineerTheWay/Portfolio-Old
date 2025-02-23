@@ -15,6 +15,15 @@ body {
 
 .red { color:#a83232; }
 .white { color:white; }
+.bold { font-weight: bold;}
+.link-black { text-decoration: none; color: black;}
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
 
 /* Header / Navigation Bar */
 
@@ -24,6 +33,7 @@ header {
     height: 50px;
     display: flex;
     justify-content: space-between;
+	box-shadow: 3px 3px 3px #333;
 }
 
 header a {
@@ -31,7 +41,7 @@ header a {
 }
 
 .header-left {
-	padding: 3px 0px;
+	padding: 5px 0px;
 	font-weight: bold;
 	font-size: 32px;
 	color: white;
@@ -135,7 +145,6 @@ header .navbar a:hover:not(.active) {
   .mobile-menu {
 	display: none;
 	position: absolute;
-
 	top: 50px;
 	left: 0;
 	height: 305px;
@@ -217,43 +226,76 @@ footer ul {
 /* Body */
 
 h1 {
-	padding: 5px;
-	padding-left: 10px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+h1 a {
+	text-decoration: none;
 }
 
 h2 {
-	padding: 5px;
-	padding-left: 10px;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+h2 a {
+	text-decoration: none;
 }
 
 p {
-	padding: 5px;
-	padding-left: 10px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
-.container {
+.fill-container {
 	flex: 1;
 }
 
-
-.content-one {
+.page-intro-container {
 	margin: 20px;
-	position: relative;
-	border-radius: 5px;
-	text-align: center;
-  	font-weight: bold;
+	margin-left: 50px;
+	margin-right: 50px;
+	display: flex;
+	height: 80px;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
-	flex
 }
 
-.content-two {
+.page-intro-container > div {
+	width: 100%;
+	text-align: center;
+  }
+
+.page-body-container {
+	margin: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.page-body-container > div {
 	background-color:rgb(180, 180, 180);
 	box-shadow: 2px 2px 3px #333;
+	width: 350px;
+	height: 350px;
 	margin: 20px;
-	position: relative;
-	border-radius: 5px;
-	flex-shrink: 0;
-}
+	text-align: center;
+	cursor: pointer;
+  }
+
+  .page-body-container > div:hover {
+	transform: scale(1.01);
+	transition: .05s;
+  }
 
 /* { <--- Debug --->
 	border: 1px solid red;
