@@ -31,10 +31,15 @@ header a {
 }
 
 .header-left {
-	padding: 2px 0px;
+	padding: 3px 0px;
 	font-weight: bold;
-	font-size: 35px;
+	font-size: 32px;
 	color: white;
+	white-space: nowrap;
+}
+
+.header-left a {
+	text-decoration: none;
 }
 
 .header-center {
@@ -73,7 +78,7 @@ header a {
   
 
 header .navbar a {
-    padding: 15px 20px;
+    padding: 15px 15px;
 	color: white;
 	font-weight: bold;
 }
@@ -175,7 +180,7 @@ header .mobile-navbar a:hover:not(.active) {
   }
 
 /* Hide/Unhide Elements for Mobile View */
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 1000px) {
 	.header-center,
 	.header-right {
 	  display: none;  /* hide standard nav/external links for mobile viewing */
