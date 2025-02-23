@@ -18,13 +18,6 @@ body {
 .bold { font-weight: bold;}
 .link-black { text-decoration: none; color: black;}
 
-a.fill-div {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-}
-
 /* Header / Navigation Bar */
 
 header { 
@@ -260,7 +253,7 @@ p {
 	margin-left: 50px;
 	margin-right: 50px;
 	display: flex;
-	height: 80px;
+	height: 75px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
