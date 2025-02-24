@@ -299,8 +299,9 @@ p {
   }
 
   .page-body-container > div.white-tile-large {
-	width: 500px;
-	height: 350px;
+	width: 775px;
+	height: 100%;
+	min-height: 350px;
 	margin: 20px;
 	text-align: left;
   }
@@ -344,6 +345,7 @@ p {
 	flex-direction: column;
 	justify-content: space-between;
 	height: 350px;
+	width: 350px;
 	margin: 20px;
   }
 
