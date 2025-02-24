@@ -98,7 +98,7 @@ header .navbar a:hover:not(.active) {
 }
 
 
-/* Mobile Icon Menu */
+/* Mobile Menu Icon */
 
 #hamburger-icon {
 	margin: auto 0;
@@ -244,10 +244,18 @@ p {
 	padding-right: 25px;
 }
 
+
+
+
+
+/* Content Containers */
+
+/* Fills extra space if not enough content */
 .fill-container {
 	flex: 1;
 }
 
+/* Page Intro Container // Stacks Vertically */
 .page-intro-container {
 	margin: 20px;
 	margin-left: 50px;
@@ -264,6 +272,9 @@ p {
 	text-align: center;
   }
 
+
+
+/* Content Body Container // Stacks Horizontally */
 .page-body-container {
 	margin: 20px;
 	margin-left: 50px;
@@ -274,8 +285,28 @@ p {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-
+/* Content Body Div Containers */
 .page-body-container > div {
+
+  }
+
+  /* No Background Containers */
+  .page-body-container > div.white-tile {
+	width: 350px;
+	height: 350px;
+	margin: 20px;
+	text-align: left;
+  }
+
+  .page-body-container > div.white-tile-large {
+	width: 500px;
+	height: 350px;
+	margin: 20px;
+	text-align: left;
+  }
+
+  /* Content Tile Containers w/ Background and Animation */
+  .page-body-container > div.tile {
 	background-color:rgb(180, 180, 180);
 	box-shadow: 2px 2px 3px #333;
 	width: 350px;
@@ -285,10 +316,67 @@ p {
 	cursor: pointer;
   }
 
-  .page-body-container > div:hover {
+  .page-body-container > div.tile:hover {
 	transform: scale(1.01);
 	transition: .05s;
   }
+  
+  .page-body-container > div.tile-small {
+	background-color:rgb(180, 180, 180);
+	box-shadow: 2px 2px 3px #333;
+	width: 350px;
+	height: 150px;
+	margin: 20px;
+	text-align: center;
+	cursor: pointer;
+  }
+
+  .page-body-container > div.tile-small:hover {
+	transform: scale(1.01);
+	transition: .05s;
+  }
+
+/* Embed Containers for mini/smaller Content Tiles that stack  */
+
+   /* This is the container for the smaller tiles */
+  .page-body-container > div.imbed {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 350px;
+	margin: 20px;
+  }
+
+  /* Embeded tiles that stack */
+  .page-body-container > div > div.imbed-tile {
+	background-color:rgb(180, 180, 180);
+	box-shadow: 2px 2px 3px #333;
+	width: 350px;
+	height: 160px;
+	text-align: center;
+	cursor: pointer;
+  }
+
+  .page-body-container > div > div.imbed-tile:hover {
+	transform: scale(1.01);
+	transition: .05s;
+  }
+
+  .page-body-container > div > div.imbed-tile-mini {
+	background-color:rgb(180, 180, 180);
+	box-shadow: 2px 2px 3px #333;
+	width: 350px;
+	height: 100px;
+	text-align: center;
+	cursor: pointer;
+  }
+
+  .page-body-container > div > div.imbed-tile-mini:hover {
+	transform: scale(1.01);
+	transition: .05s;
+  }
+
+  
 
 /* { <--- Debug --->
 	border: 1px solid red;
