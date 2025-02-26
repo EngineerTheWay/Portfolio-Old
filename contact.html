@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caleb - Contact Info</title>
+	<!-- Normalize CSS  -->
+	<link rel="stylesheet" href="normalize.css">
     <!-- Stylesheet  -->
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +25,7 @@
         <!-- Name  -->
         <div class="header-left">
             <a href="index.html">
-                <span class="white">calebway.</span>
-                <span class="red">(portfol)</span>
-                <span class="white">io</span>
+                <span class="white">calebway.</span><span class="red">(portfol)</span><span class="white">io</span>
             </a>
         </div>
 
@@ -74,6 +73,7 @@
         </div>
     </header>
 
+	<!-- Page Content  -->
     <main>
 		<content>
 			<div class="content-divider">
@@ -86,12 +86,12 @@
 					<p><span class="bold">Email:</span> contact@calebway.io</p>
 				</div>
 				<div class="tile-container">
-					<div class="tile-container-tile">
-						<h1>LinkedIn</h1>
+					<div class="tile-container-tile"  onclick="openInNewTab('https://www.linkedin.com/in/caleb-way-51b202247/');">
+						<a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank" class="link-remove-format"><h1>LinkedIn</h1></a>
 						<p>Connect with me on LinkedIn!</p>
 					</div>
-					<div class="tile-container-tile">
-						<h1>Github</h1>
+					<div class="tile-container-tile" onclick="openInNewTab('https://github.com/EngineerTheWay/');">
+						<a href="https://github.com/EngineerTheWay" target="_blank" class="link-remove-format"><h1>Github</h1></a>
 						<p>Check out some of my projects on Github!</p>
 					</div>
 				</div>
@@ -99,9 +99,7 @@
 		</content>
 	</main>
 
-	<!-- Adds space for footer  -->
-	<div class="fill-space"></div>
-
+	<!-- Footer  -->
     <footer>
         <p>© 2025 Caleb Way. All Rights Reserved. | calebway.io</p>
     </footer>

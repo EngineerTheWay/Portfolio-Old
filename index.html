@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caleb - About Me</title>
+	<!-- Normalize CSS  -->
+	<link rel="stylesheet" href="normalize.css">
     <!-- Stylesheet  -->
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,116 +21,114 @@
 </head>
 
 <body>
-        <header>
-            <!-- Name  -->
-            <div class="header-left">
-                <a href="index.html">
-                    <span class="white">calebway.</span>
-                    <span class="red">(portfol)</span>
-                    <span class="white">io</span>
-                </a>
-            </div>
+    <header>
+        <!-- Name  -->
+        <div class="header-left">
+            <a href="index.html">
+                <span class="white">calebway.</span><span class="red">(portfol)</span><span class="white">io</span>
+            </a>
+        </div>
 
-            <!-- Navigation Links  -->
-            <nav class="header-center">
+        <!-- Navigation Links  -->
+        <nav class="header-center">
+            <ul>
+                <li class="navbar"><a class="navbar active" href="index.html">About Me</a></li>
+                <li class="navbar"><a href="resume.html">Resume</a></li>
+                <li class="navbar"><a href="projects.html">Projects</a></li>
+                <li class="navbar"><a href="blog.html">Blog</a></li>
+                <li class="navbar"><a href="contact.html">Contact Info</a></li>
+            </ul>
+        </nav>
+
+        <!-- External Links  -->
+        <div class="header-right">
+            <ul>
+                <li class="navbar">
+                    <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank">
+                        <img src="./media/linkedin.png" alt="LinkedIn">
+                    </a>
+                </li>
+                <li class="navbar">
+                    <a href="https://github.com/EngineerTheWay" target="_blank">
+                        <img src="./media/github.png" alt="GitHub" height="13" width="50">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Mobile Nav Menu  -->
+        <div id="hamburger-icon" onclick="toggleMobileMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <nav class="mobile-menu">
                 <ul>
-                    <li class="navbar"><a class="navbar active" href="index.html">About Me</a></li>
-                    <li class="navbar"><a href="resume.html">Resume</a></li>
-                    <li class="navbar"><a href="projects.html">Projects</a></li>
-                    <li class="navbar"><a href="blog.html">Blog</a></li>
-                    <li class="navbar"><a href="contact.html">Contact Info</a></li>
+                    <li class="mobile-navbar"><a class="mobile-navbar active" href="index.html">About Me</a></li>
+                    <li class="mobile-navbar"><a href="resume.html">Resume</a></li>
+                    <li class="mobile-navbar"><a href="projects.html">Projects</a></li>
+                    <li class="mobile-navbar"><a href="blog.html">Blog</a></li>
+                    <li class="mobile-navbar"><a href="contact.html">Contact Info</a></li>
                 </ul>
             </nav>
+        </div>
+    </header>
 
-            <!-- External Links  -->
-            <div class="header-right">
-                <ul>
-                    <li class="navbar">
-                        <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank">
-                            <img src="./media/linkedin.png" alt="LinkedIn">
-                        </a>
-                    </li>
-                    <li class="navbar">
-                        <a href="https://github.com/EngineerTheWay" target="_blank">
-                            <img src="./media/github.png" alt="GitHub" height="13" width="50">
-                        </a>
-                    </li>
-                </ul>
+    <!-- Page Content  -->
+    <main>
+        <content>
+            <div class="content-divider">
+                <div>
+                    <h1>Caleb Way</h1>
+                </div>
+                <div>
+                    <h3>MBA Candidate | Air Force Veteran | IT & Business Strategy</h3>
+                </div>
             </div>
 
-            <!-- Mobile Nav Menu  -->
-            <div id="hamburger-icon" onclick="toggleMobileMenu()">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <nav class="mobile-menu">
-                    <ul>
-                        <li class="mobile-navbar"><a class="mobile-navbar active" href="index.html">About Me</a></li>
-                        <li class="mobile-navbar"><a href="resume.html">Resume</a></li>
-                        <li class="mobile-navbar"><a href="projects.html">Projects</a></li>
-                        <li class="mobile-navbar"><a href="blog.html">Blog</a></li>
-                        <li class="mobile-navbar"><a href="contact.html">Contact Info</a></li>
-                    </ul>
-                </nav>
+            <div class="content-body">
+                <div class="white-tile">
+                    <img src="./media/me.jpg" alt="A picture of me" height="350" width="350">
+                </div>
+                <div class="white-tile-large">
+                    <h1>About Me</h1>
+                    <p>I am an Air Force veteran preparing for my transition into the civilian workforce. With over eight years of experience in military intelligence analysis, offensive cyberspace operations, and both organizational and team management, I bring a strong foundation in leadership and innovative problem-solving.</p>
+                    <p>I’m passionate about the impact IT innovation can have on organizations. Throughout my career in the military, I worked on numerous projects that leveraged IT tools and systems to overhaul workflows and substantially increase administrative efficiency.</p>
+                    <p>I’m looking forward to landing a role in the private sector at the intersection of business and IT—where I can expand my technical skillset while applying my management experience to help my teams create innovative new products in the tech industry.</p>
+                </div>
             </div>
-        </header>
 
-        <main>
-			<content>
-				<div class="content-divider">
-					<div>
-						<h1>Caleb Way</h1>
-					</div>
-					<div>
-						<h3>MBA Candidate | Air Force Veteran | IT & Business Strategy</h3>
-					</div>
-				</div>
-		
-				<div class="content-body">
-					<div class="white-tile">
-						<img src="./media/me.jpg" alt="A picture of me" height="350" width="350">
-					</div>
-					<div class="white-tile-large">
-						<h1>About Me</h1>
-						<p>I am an Air Force veteran preparing for my transition into the civilian workforce. With over eight years of experience in military intelligence analysis, offensive cyberspace operations, and both organizational and team management, I bring a strong foundation in leadership and innovative problem-solving.</p>
-						<p>I’m passionate about the impact IT innovation can have on organizations. Throughout my career in the military, I worked on numerous projects that leveraged IT tools and systems to overhaul workflows and substantially increase administrative efficiency.</p>
-						<p>I’m looking forward to landing a role in the private sector at the intersection of business and IT—where I can expand my technical skillset while applying my management experience to help my teams create innovative new products in the tech industry.</p>
-					</div>
-				</div>
-		
-				<div class="content-body">
-					<div class="tile-container">
-						<div class="tile-container-tile">
-							<h1>Resume</h1>
-							<p>Check out my resume!</p>
-						</div>
-						<div class="tile-container-tile">
-							<h1>Projects</h1>
-							<p>Take a look at my projects.</p>
-						</div>
-					</div>
-					<div class="tile">
-						<h1>Tech Blog</h1>
-						<p></p>
-					</div>
-					<div class="tile-container">
-						<div class="tile-container-tile-mini">
-							<h1>Contact Info</h1>
-						</div>
-						<div class="tile-container-tile-mini">
-							<h1>LinkedIn</h1>
-						</div>
-						<div class="tile-container-tile-mini">
-							<h1>GitHub</h1>
-						</div>
-					</div>
-				</div>
-			</content>
-		</main>
+            <div class="content-body">
+                <div class="tile-container">
+                    <div class="tile-container-tile" onclick="navigateToURL('resume.html');">
+                        <h1>Resume</h1>
+                    </div>
+                    <div class="tile-container-tile" onclick="navigateToURL('projects.html');">
+                        <h1>Projects</h1>
+                    </div>
+                </div>
+                <div class="tile" class="tile-container-tile" onclick="navigateToURL('blog.html');">
+                    <h1>Tech Blog</h1>
+                    <p></p>
+                </div>
+                <div class="tile-container">
+                    <div class="tile-container-tile-mini" onclick="navigateToURL('contact.html');">
+                        <h1>Contact Info</h1>
+                    </div>
+                    <div class="tile-container-tile-mini" onclick="openInNewTab('https://www.linkedin.com/in/caleb-way-51b202247/');">
+                        <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank" class="link-remove-format"><h1>LinkedIn</h1></a>
+                    </div>
+                    <div class="tile-container-tile-mini" onclick="openInNewTab('https://github.com/EngineerTheWay/');">
+                        <a href="https://github.com/EngineerTheWay" target="_blank" class="link-remove-format"><h1>Github</h1></a>
+                    </div>
+                </div>
+            </div>
+        </content>
+    </main>
 
-        <footer>
-            <p>© 2025 Caleb Way. All Rights Reserved. | calebway.io</p>
-        </footer>
+    <!-- Footer  -->
+    <footer>
+        <p>© 2025 Caleb Way. All Rights Reserved. | calebway.io</p>
+    </footer>
 </body>
 
 </html>

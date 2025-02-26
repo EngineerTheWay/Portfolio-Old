@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caleb - Projects</title>
+	<!-- Normalize CSS  -->
+	<link rel="stylesheet" href="normalize.css">
     <!-- Stylesheet  -->
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +25,7 @@
         <!-- Name  -->
         <div class="header-left">
             <a href="index.html">
-                <span class="white">calebway.</span>
-                <span class="red">(portfol)</span>
-                <span class="white">io</span>
+                <span class="white">calebway.</span><span class="red">(portfol)</span><span class="white">io</span>
             </a>
         </div>
 
@@ -74,6 +73,7 @@
         </div>
     </header>
 
+	<!-- Page Content  -->
     <main>
 		<content>
 			<div class="content-divider">
@@ -81,14 +81,15 @@
 			</div>
 	
 			<div class="content-body">
-				<div class="tile">
+				<div class="tile" onclick="openInNewTab('https://github.com/EngineerTheWay/Portfolio');">
 					<h1>Portfolio Site</h1>
 					<p>View the source code of this portfolio website on my Github!</p>
 					<p>This project demonstrates my mastery of:</p>
 					<p><span class="bold">HTML/CSS</span></p>
 				</div>
-				<div class="tile">
-					<a href="https://github.com/EngineerTheWay/CMSC115" target="_blank">
+
+				<div class="tile" onclick="openInNewTab('https://github.com/EngineerTheWay/CMSC115');">
+					<a href="https://github.com/EngineerTheWay/CMSC115" target="_blank" class="tile-link">
 						<h1>Customer Database</h1>
 					</a>
 					<p>This is a basic Java program that takes user input</p>
@@ -99,9 +100,7 @@
 		</content>
 	</main>
 
-	<!-- Adds space for footer  -->
-	<div class="fill-space"></div>
-
+	<!-- Footer  -->
     <footer>
         <p>© 2025 Caleb Way. All Rights Reserved. | calebway.io</p>
     </footer>

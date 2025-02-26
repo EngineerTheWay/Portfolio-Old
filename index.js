@@ -5,3 +5,11 @@ function toggleMobileMenu() {
     menu.classList.toggle('open');
     hamburger.classList.toggle('open');  
 }
+
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+  }
+
+  function navigateToURL(url) {
+    window.location.href = url;
+  }
