@@ -211,13 +211,20 @@ h1 a, h2 a, h3 a {
 }
 
 /* Content Containers */
-/* Fills extra space if not enough content */
-.fill-space {
+main {
+	/* Creates main content flexbox */
     flex: 1;
 }
 
+.content {
+	/* Ensures main content flexbox and page is filled; pushes footer to bottom of page when lacking sufficient content */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* Page Intro Container // Stacks Vertically */
-.page-divider-container {
+.content-divider {
     margin: 20px;
     margin-left: 50px;
     margin-right: 50px;
@@ -228,13 +235,13 @@ h1 a, h2 a, h3 a {
     flex-direction: column;
 }
 
-.page-divider-container > div {
+.content-divider > div {
     width: 100%;
     text-align: center;
 }
 
 /* Content Body Container // Stacks Horizontally */
-.page-body-container {
+.content-body {
     margin: 20px;
     margin-left: 50px;
     margin-right: 50px;
@@ -245,13 +252,13 @@ h1 a, h2 a, h3 a {
     flex-wrap: wrap;
 }
 
-/* Content Body Div Containers */
-.page-body-container > div {
+/* Content Containers */
+.content-body > div {
     /* No specific styles */
 }
 
-/* No Background Containers */
-.page-body-container > div.white-tile {
+/* No Background Content Containers */
+.content-body > div.white-tile {
     width: 350px;
     height: 350px;
     min-width: 350px;
@@ -259,13 +266,13 @@ h1 a, h2 a, h3 a {
     text-align: left;
 }
 
-.page-body-container > div.white-tile img {
+.content-body > div.white-tile img {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
 }
 
-.page-body-container > div.white-tile-large {
+.content-body > div.white-tile-large {
     width: 725px;
     height: 100%;
     min-width: 350px;
@@ -274,8 +281,8 @@ h1 a, h2 a, h3 a {
     text-align: left;
 }
 
-/* Content Tile Containers w/ Background and Animation */
-.page-body-container > div.tile {
+/* Content "Tile" Containers (w/ Background and Animation) */
+.content-body > div.tile {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
     width: 350px;
@@ -286,12 +293,12 @@ h1 a, h2 a, h3 a {
     cursor: pointer;
 }
 
-.page-body-container > div.tile:hover {
+.content-body > div.tile:hover {
     transform: scale(1.01);
     transition: .05s;
 }
 
-.page-body-container > div.tile-small {
+.content-body > div.tile-small {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
     width: 350px;
@@ -302,14 +309,14 @@ h1 a, h2 a, h3 a {
     cursor: pointer;
 }
 
-.page-body-container > div.tile-small:hover {
+.content-body > div.tile-small:hover {
     transform: scale(1.01);
     transition: .05s;
 }
 
-/* Embed Containers for mini/smaller Content Tiles that stack */
+/* Tile Containers for mini/smaller Content Tiles that stack */
 /* This is the container for the smaller tiles */
-.page-body-container > div.imbed {
+.content-body > div.tile-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -320,7 +327,7 @@ h1 a, h2 a, h3 a {
 }
 
 /* Embedded tiles that stack */
-.page-body-container > div > div.imbed-tile {
+.content-body > div > div.tile-container-tile {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
     width: 100%;
@@ -333,12 +340,12 @@ h1 a, h2 a, h3 a {
     justify-content: space-evenly;
 }
 
-.page-body-container > div > div.imbed-tile:hover {
+.content-body > div > div.tile-container-tile:hover {
     transform: scale(1.01);
     transition: .05s;
 }
 
-.page-body-container > div > div.imbed-tile-mini {
+.content-body > div > div.tile-container-tile-mini {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
     width: 100%;
@@ -348,7 +355,7 @@ h1 a, h2 a, h3 a {
     cursor: pointer;
 }
 
-.page-body-container > div > div.imbed-tile-mini:hover {
+.content-body > div > div.tile-container-tile-mini:hover {
     transform: scale(1.01);
     transition: .05s;
 }
