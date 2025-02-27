@@ -240,7 +240,7 @@ main {
 
 .page-break {
     
-	max-width: 500px;
+	max-width: 750px;
     height: 5px; 
     background-color: #333; 
     border-radius: 5px; 
@@ -258,12 +258,21 @@ main {
 	flex-direction: row;
 }
 
+.page-break-thin {
+    
+	max-width: 200px;
+    height: 1px; 
+    background-color: #333; 
+    border-radius: 5px; 
+	display: flex;
+	flex-direction: row;
+}
+
 /* Content Body Container // Stacks Horizontally */
 .content-body {
     margin: 20px;
     margin-left: 50px;
     margin-right: 50px;
-
     display: flex;
     justify-content: center;
     align-items: center;
