@@ -298,11 +298,18 @@ main {
     max-width: 350px; 
     min-width: 325px; 
     cursor: default;
+    transform: none;
 }
 
 .content-body-wrap > div.white-tile-large, div.tile {
     margin: 10px;
 }
+
+.content-body-wrap:hover {
+    transform: scale(1.01);
+    transition: .05s;
+}
+
 
 /* Content Containers */
 .content-body > div {
