@@ -280,14 +280,27 @@ main {
     flex-wrap: wrap;
 }
 
+.content-body-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: fit-content
+}
+
+.content-body-wrap > div.white-tile-large, div.tile {
+    margin: 10px;
+}
+
 /* Content Containers */
 .content-body > div {
     /* No specific styles */
 }
 
 /* No Background Content Containers */
-.content-body > div.white-tile {
-
+.white-tile {
     width: 350px;
     height: 350px;
     min-width: 350px;
@@ -295,7 +308,7 @@ main {
     text-align: left;
 }
 
-.content-body > div.white-tile img {
+.white-tile img {
 	box-shadow: 2px 2px 3px #333;
 	border-radius: 25px;
     flex-shrink: 0;
@@ -304,14 +317,16 @@ main {
 	
 }
 
-.content-body > div.white-tile-large {
+.white-tile-large {
+    flex: 1 1 350px;
     width: 725px;
-    height: 100%;
-    min-width: 350px;
+    max-width: 725px; /* Maximum width */
+    min-width: 350px; /* Minimum width */
     min-height: 350px;
     margin: 20px;
     text-align: left;
 }
+
 
 /* Modifier Classes for Tiles */
 .bordered {
@@ -321,12 +336,19 @@ main {
 
 /* Content "Tile" Containers (w/ Background and Animation) */
 /* Ensure the link covers the entire tile */
+
+/* Tile Formatting */
 .tile-link {
     text-decoration: none;
     color: inherit;
 }
 
-.content-body > div.tile {
+.default-cursor {
+    text-decoration: none;
+    cursor: default;
+}
+
+.tile {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
 	border-radius: 25px;
@@ -338,18 +360,18 @@ main {
     cursor: pointer;
 }
 
-.content-body > div.tile a {
+.tile a {
   	width:100%;
   	height:100%;
   	z-index: 9999;
 }
 
-.content-body > div.tile:hover {
+.tile:hover {
     transform: scale(1.01);
     transition: .05s;
 }
 
-.content-body > div.tile-small {
+.tile-small {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
 	border-radius: 25px;
@@ -361,14 +383,14 @@ main {
     cursor: pointer;
 }
 
-.content-body > div.tile-small:hover {
+.tile-small:hover {
     transform: scale(1.01);
     transition: .05s;
 }
 
 /* Tile Containers for mini/smaller Content Tiles that stack */
 /* This is the container for the smaller tiles */
-.content-body > div.tile-container {
+.tile-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -379,7 +401,7 @@ main {
 }
 
 /* Embedded tiles that stack */
-.content-body > div > div.tile-container-tile {
+.tile-container-tile {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
 	border-radius: 25px;
@@ -393,12 +415,12 @@ main {
     justify-content: space-evenly;
 }
 
-.content-body > div > div.tile-container-tile:hover {
+.tile-container-tile:hover {
     transform: scale(1.01);
     transition: .05s;
 }
 
-.content-body > div > div.tile-container-tile-mini {
+.tile-container-tile-mini {
     background-color: rgb(180, 180, 180);
     box-shadow: 2px 2px 3px #333;
 	border-radius: 25px;
@@ -409,7 +431,7 @@ main {
     cursor: pointer;
 }
 
-.content-body > div > div.tile-container-tile-mini:hover {
+..tile-container-tile-mini:hover {
     transform: scale(1.01);
     transition: .05s;
 }
