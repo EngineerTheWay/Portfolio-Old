@@ -21,6 +21,7 @@ body {
 .white { color: white; }
 .bold { font-weight: bold; }
 .link-remove-format { text-decoration: none; color: inherit; }
+.reduce-pad { padding: 10px;}
 
 /* Header / Navigation Bar */
 header {
@@ -237,6 +238,26 @@ main {
     text-align: center;
 }
 
+.page-break {
+    min-width: 350px;
+	max-width: 500px;
+    height: 5px; 
+    background-color: #333; 
+    border-radius: 5px; 
+	display: flex;
+	flex-direction: row;
+}
+
+.page-break-short {
+    min-width: 350px;
+	max-width: 350px;
+    height: 2px; 
+    background-color: #333; 
+    border-radius: 5px; 
+	display: flex;
+	flex-direction: row;
+}
+
 /* Content Body Container // Stacks Horizontally */
 .content-body {
     margin: 20px;
@@ -274,16 +295,31 @@ main {
 }
 
 .content-body > div.white-tile-large {
-	border: 2px solid #a83232;
-	border-radius: 25px;
     width: 725px;
     height: 100%;
     min-width: 350px;
     min-height: 350px;
     margin: 20px;
     text-align: left;
-	
-	
+}
+
+/* Modifier Classes for Tiles */
+.bordered {
+    border: 2px solid #a83232;
+    border-radius: 25px;
+}
+
+.bordered-flex {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensure this is applied */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    width: fit-content;
+    max-width: 100%;
+    border: 2px solid #a83232;
+    border-radius: 25px;
 }
 
 /* Content "Tile" Containers (w/ Background and Animation) */
