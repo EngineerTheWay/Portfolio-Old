@@ -291,6 +291,15 @@ main {
     min-width: 350px;
 }
 
+.content-body-wrap > div.tile {
+    box-shadow: none;
+    flex: 1 1 335px;
+    width: 350px;
+    max-width: 350px; 
+    min-width: 325px; 
+    cursor: default;
+}
+
 .content-body-wrap > div.white-tile-large, div.tile {
     margin: 10px;
 }
@@ -321,8 +330,8 @@ main {
 .white-tile-large {
     flex: 1 1 350px;
     width: 725px;
-    max-width: 725px; /* Maximum width */
-    min-width: 350px; /* Minimum width */
+    max-width: 725px; 
+    min-width: 350px; 
     min-height: 350px;
     margin: 20px;
     text-align: left;
@@ -432,7 +441,7 @@ main {
     cursor: pointer;
 }
 
-..tile-container-tile-mini:hover {
+.tile-container-tile-mini:hover {
     transform: scale(1.01);
     transition: .05s;
 }
