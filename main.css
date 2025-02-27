@@ -301,7 +301,7 @@ main {
     transform: none;
 }
 
-.content-body-wrap > div.white-tile-large, div.tile {
+.content-body-wrap > div.white-tile-large, div.white-tile, div.tile {
     margin: 10px;
 }
 
@@ -344,6 +344,11 @@ main {
     text-align: left;
 }
 
+.white-tile-large p, .white-tile p,
+.white-tile-large h1, .white-tile h1,
+.white-tile-large h2, .white-tile h2 {
+    margin: 5px;
+}
 
 /* Modifier Classes for Tiles */
 .bordered {
