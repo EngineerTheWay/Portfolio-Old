@@ -316,7 +316,13 @@ main {
     /* No specific styles */
 }
 
-/* No Background Content Containers */
+/* Modifier Classes for Tiles */
+.bordered {
+    border: 2px solid #a83232;
+    border-radius: 25px;
+}
+
+/* No Background Content Tile Containers */
 .white-tile {
     width: 350px;
     height: 350px;
@@ -350,13 +356,7 @@ main {
     margin: 5px;
 }
 
-/* Modifier Classes for Tiles */
-.bordered {
-    border: 2px solid #a83232;
-    border-radius: 25px;
-}
-
-/* Content "Tile" Containers (w/ Background and Animation) */
+/* Content Tile Containers (w/ Background and Animation) */
 /* Ensure the link covers the entire tile */
 
 /* Tile Formatting */
@@ -368,6 +368,7 @@ main {
 .default-cursor {
     text-decoration: none;
     cursor: default;
+    transform: none;
 }
 
 .tile {
@@ -416,6 +417,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     height: 350px;
     width: 350px;
     min-width: 350px;
@@ -430,7 +432,6 @@ main {
     width: 100%;
     height: 160px;
     min-width: 350px;
-    text-align: center;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -449,8 +450,11 @@ main {
     width: 100%;
     height: 100px;
     min-width: 350px;
-    text-align: center;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .tile-container-tile-mini:hover {
