@@ -289,6 +289,7 @@ main {
     width: 100%;
     max-width: fit-content;
     min-width: 350px;
+    cursor: default;
 }
 
 .content-body-wrap > div.tile {
@@ -297,7 +298,6 @@ main {
     width: 350px;
     max-width: 350px; 
     min-width: 325px; 
-    cursor: default;
     transform: none;
 }
 
@@ -316,13 +316,24 @@ main {
     /* No specific styles */
 }
 
-/* No Background Content Containers */
+/* Modifier Classes for Tiles */
+.bordered {
+    border: 2px solid #a83232;
+    border-radius: 25px;
+}
+
+/* No Background Content Tile Containers */
 .white-tile {
+	border-radius: 25px;
     width: 350px;
-    height: 350px;
     min-width: 350px;
+    height: 350px;
     margin: 20px;
-    text-align: left;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .white-tile img {
@@ -331,7 +342,18 @@ main {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
-	
+	cursor: default;
+}
+
+.white-tile a {
+    width:100%;
+    height:100%;
+    z-index: 999;
+}
+
+.white-tile:hover {
+  transform: scale(1.01);
+  transition: .05s;
 }
 
 .white-tile-large {
@@ -350,13 +372,7 @@ main {
     margin: 5px;
 }
 
-/* Modifier Classes for Tiles */
-.bordered {
-    border: 2px solid #a83232;
-    border-radius: 25px;
-}
-
-/* Content "Tile" Containers (w/ Background and Animation) */
+/* Content Tile Containers (w/ Background and Animation) */
 /* Ensure the link covers the entire tile */
 
 /* Tile Formatting */
@@ -368,6 +384,7 @@ main {
 .default-cursor {
     text-decoration: none;
     cursor: default;
+    transform: none;
 }
 
 .tile {
@@ -380,12 +397,6 @@ main {
     margin: 20px;
     text-align: center;
     cursor: pointer;
-}
-
-.tile a {
-  	width:100%;
-  	height:100%;
-  	z-index: 9999;
 }
 
 .tile:hover {
@@ -416,6 +427,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     height: 350px;
     width: 350px;
     min-width: 350px;
@@ -430,7 +442,6 @@ main {
     width: 100%;
     height: 160px;
     min-width: 350px;
-    text-align: center;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -449,13 +460,74 @@ main {
     width: 100%;
     height: 100px;
     min-width: 350px;
-    text-align: center;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .tile-container-tile-mini:hover {
     transform: scale(1.01);
     transition: .05s;
+}
+
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    
+}
+
+.modal h1 {
+    margin-left: 20px;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    margin: auto;
+    top: 185px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50vw; 
+    height: 50vh;
+    max-height: calc(100vh - 185px);
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@media only screen and (max-width: 1000px) {
+    .modal-content {
+        
+        width: 80vw; 
+        height: 60vh;
+        max-height: calc(100vh - 185px);
+    }
+}
+
+/* Modal Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Footer */
