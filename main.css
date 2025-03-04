@@ -476,6 +476,10 @@ main {
     
 }
 
+.modal h1 {
+    margin-left: 20px;
+}
+
 /* Modal Content */
 .modal-content {
     position: relative;
