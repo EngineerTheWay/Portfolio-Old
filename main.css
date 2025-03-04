@@ -289,7 +289,7 @@ main {
     width: 100%;
     max-width: fit-content;
     min-width: 350px;
-    cursor: pointer;
+    cursor: default;
 }
 
 .content-body-wrap > div.tile {
@@ -324,11 +324,16 @@ main {
 
 /* No Background Content Tile Containers */
 .white-tile {
+	border-radius: 25px;
     width: 350px;
-    height: 350px;
     min-width: 350px;
+    height: 350px;
     margin: 20px;
-    text-align: left;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .white-tile img {
@@ -337,7 +342,18 @@ main {
     flex-shrink: 0;
     min-width: 100%;
     min-height: 100%;
-	
+	cursor: default;
+}
+
+.white-tile a {
+    width:100%;
+    height:100%;
+    z-index: 999;
+}
+
+.white-tile:hover {
+  transform: scale(1.01);
+  transition: .05s;
 }
 
 .white-tile-large {
@@ -381,12 +397,6 @@ main {
     margin: 20px;
     text-align: center;
     cursor: pointer;
-}
-
-.tile a {
-  	width:100%;
-  	height:100%;
-  	z-index: 999;
 }
 
 .tile:hover {
