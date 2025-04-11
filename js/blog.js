@@ -10,11 +10,7 @@ fetch('./data/posts.json')
     const container = document.getElementById('blog-section');
 
     posts.forEach((post, index) => {
-      // Create outer layout wrapper
-      const divider = document.createElement('div');
-      divider.className = 'content-divider';
-
-      // Inner content tile
+      // Create the post tile wrapper
       const wrapper = document.createElement('div');
       wrapper.className = 'content-body';
 
@@ -28,18 +24,14 @@ fetch('./data/posts.json')
             <h1>${post.date}</h1>
             <h3>${post.category}</h3>
             <p><strong>Keywords:</strong> ${post.keywords.join(', ')}</p>
-            <!-- Optional: <button onclick="openBlogModal('${post.id}')">Read More</button> -->
           </div>
         </div>
       `;
 
-      // Append content-body to content-divider
-      divider.appendChild(wrapper);
+      // Append the post to the blog section
+      container.appendChild(wrapper);
 
-      // Append the complete post block to the container
-      container.appendChild(divider);
-
-      // Add spacer between posts (but not after last one)
+      // Add spacing between posts (but not after the last one)
       if (index < posts.length - 1) {
         const spacer = document.createElement('div');
         spacer.className = 'page-break-thin';
