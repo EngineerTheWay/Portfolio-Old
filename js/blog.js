@@ -10,7 +10,11 @@ fetch('./data/posts.json')
     const container = document.getElementById('blog-section');
 
     posts.forEach((post, index) => {
-      // Create the post tile wrapper
+      // Create outer layout wrapper
+      const divider = document.createElement('div');
+      divider.className = 'content-divider';
+
+      // Inner content tile
       const wrapper = document.createElement('div');
       wrapper.className = 'content-body';
 
@@ -28,15 +32,18 @@ fetch('./data/posts.json')
         </div>
       `;
 
-      // Append the post to the blog section
-      container.appendChild(wrapper);
+      // Append tile content
+      divider.appendChild(wrapper);
 
-      // Add spacing between posts (but not after the last one)
+      // Add spacer inside the same divider (if not last post)
       if (index < posts.length - 1) {
         const spacer = document.createElement('div');
         spacer.className = 'page-break-thin';
-        container.appendChild(spacer);
+        divider.appendChild(spacer);
       }
+
+      // Append everything to the blog section
+      container.appendChild(divider);
     });
   })
   .catch(error => {
