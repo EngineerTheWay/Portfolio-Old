@@ -9,12 +9,11 @@ fetch('./data/posts.json')
   .then(posts => {
     const container = document.getElementById('blog-section');
 
-    posts.forEach((post, index) => {
-      // Create outer layout wrapper
-      const divider = document.createElement('div');
-      divider.className = 'content-divider';
+    // Create a single outer wrapper for all blog posts
+    const divider = document.createElement('div');
+    divider.className = 'content-divider';
 
-      // Inner content tile
+    posts.forEach((post, index) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'content-body';
 
@@ -32,19 +31,16 @@ fetch('./data/posts.json')
         </div>
       `;
 
-      // Append tile content
       divider.appendChild(wrapper);
 
-      // Add spacer inside the same divider (if not last post)
       if (index < posts.length - 1) {
         const spacer = document.createElement('div');
         spacer.className = 'page-break-thin';
         divider.appendChild(spacer);
       }
-
-      // Append everything to the blog section
-      container.appendChild(divider);
     });
+
+    container.appendChild(divider);
   })
   .catch(error => {
     console.error("Error loading blog posts:", error);
