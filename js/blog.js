@@ -1,11 +1,14 @@
-// Load blog posts and render them in the tile layout
 fetch('./data/posts.json')
   .then(response => response.json())
   .then(posts => {
     const container = document.getElementById('blog-section');
 
     posts.forEach((post, index) => {
-      // Create blog tile wrapper
+      // Create content-divider wrapper
+      const dividerWrapper = document.createElement('div');
+      dividerWrapper.className = 'content-divider';
+
+      // Create blog tile content
       const wrapper = document.createElement('div');
       wrapper.className = 'content-body';
 
@@ -23,13 +26,14 @@ fetch('./data/posts.json')
         </div>
       `;
 
-      container.appendChild(wrapper);
+      dividerWrapper.appendChild(wrapper);
+      container.appendChild(dividerWrapper);
 
-      // Add a divider between posts (but not after the last one)
+      // Add a line break after the post, if it's not the last one
       if (index < posts.length - 1) {
-        const divider = document.createElement('div');
-        divider.className = 'page-break-thin';
-        container.appendChild(divider);
+        const spacer = document.createElement('div');
+        spacer.className = 'page-break-thin';
+        container.appendChild(spacer);
       }
     });
   });
