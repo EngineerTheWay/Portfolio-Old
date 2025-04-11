@@ -18,8 +18,7 @@ fetch('./data/posts.json')
           <div class="tile">
             <h1>${post.date}</h1>
             <h3>${post.category}</h3>
-            <p>Keywords: ${post.keywords.join(', ')}</p>
-            <button onclick="openBlogModal('${post.id}')">Read More</button>
+            <p><strong>Keywords:</strong> ${post.keywords.join(', ')}</p>
           </div>
         </div>
       `;
@@ -34,24 +33,3 @@ fetch('./data/posts.json')
       }
     });
   });
-
-// Modal
-function openBlogModal(id) {
-  fetch('/data/posts.json')
-    .then(res => res.json())
-    .then(posts => {
-      const post = posts.find(p => p.id === id);
-      const modal = document.createElement('div');
-      modal.className = 'modal';
-
-      modal.innerHTML = `
-        <div class="modal-content">
-          <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
-          <h1>${post.title}</h1>
-          <p>${post.content}</p>
-        </div>
-      `;
-
-      document.body.appendChild(modal);
-    });
-}
