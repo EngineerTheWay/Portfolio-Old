@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caleb - About Me</title>
 	<!-- Normalize CSS  -->
-	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="./css/normalize.css">
     <!-- Stylesheet  -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <!-- JavaScript  -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -32,10 +32,10 @@
         <!-- Navigation Links  -->
         <nav class="header-center">
             <ul>
-                <li class="navbar"><a class="navbar active" href="index.html">About Me</a></li>
-                <li class="navbar"><a href="resume.html">Resume</a></li>
+                <li class="navbar"><a class="navbar active" href="index.html">About</a></li>
                 <li class="navbar"><a href="projects.html">Projects</a></li>
-                <li class="navbar"><a href="contact.html">Contact Info</a></li>
+                <li class="navbar"><a href="insights.html">Insights</a></li>
+                <li class="navbar"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -62,10 +62,10 @@
             <div class="bar3"></div>
             <nav class="mobile-menu">
                 <ul>
-                    <li class="mobile-navbar"><a class="mobile-navbar active" href="index.html">About Me</a></li>
-                    <li class="mobile-navbar"><a href="resume.html">Resume</a></li>
+                    <li class="mobile-navbar"><a class="mobile-navbar active" href="index.html">About</a></li>
                     <li class="mobile-navbar"><a href="projects.html">Projects</a></li>
-                    <li class="mobile-navbar"><a href="contact.html">Contact Info</a></li>
+                    <li class="mobile-navbar"><a href="insights.html">Insights</a></li>
+                    <li class="mobile-navbar"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -90,12 +90,14 @@
                         <img src="./media/me.jpg" alt="A picture of me" height="350" width="350">
                     </div>
                     
-                    <div class="white-tile-large bordered">
+                <div class="white-tile-large bordered">
                         <h1>About Me</h1>
-				<p>I’m a former Air Force foreign language and cyber intelligence analyst transitioning into a career in tech. I'm passionate about using information systems to solve real-world problems and improve how organizations operate—especially in mission-driven environments.</p>
-				<p>With nearly a decade of experience in military intelligence, cyber operations, and classroom instruction, I’ve built a strong foundation in strategic thinking, problem-solving, and team leadership. I’ve led cross-functional projects that automated workflows, enhanced cybersecurity, and improved access to organizational resources.</p>
-				<p>As I pivot into the private sector, I’m targeting roles such as business analyst, systems analyst, or IT operations specialist—where I can bridge the gap between users, leadership, and technical teams. I’m excited to build expertise in enterprise IT, cloud platforms, and security while helping organizations achieve impact through smart, user-centered technology solutions.</p>
+                            <p>I’m a former Air Force foreign language and cyber intelligence analyst transitioning into a career in tech. I'm passionate about using information systems to solve real-world problems and help mission-driven organizations work smarter.</p>
 
+                            <p>With nearly a decade of experience in military intelligence, cyber operations, and classroom instruction, I’ve developed a strong foundation in strategic thinking, problem-solving, and team leadership. I’ve led cross-functional teams in national security, academic, and nonprofit settings—leveraging technology in innovative ways to solve complex challenges.</p>
+                        
+                            <p>Now pivoting into the private sector, I’m focused on building expertise in enterprise IT, cloud platforms, and cybersecurity, with the goal of becoming an expert in helping teams and organizations use technology to drive meaningful, people-first, mission-driven outcomes.</p>
+                        
                     </div>
                 </div>
 
@@ -104,19 +106,21 @@
                 <div class="content-body">
                     <div class="white-tile-large bordered">
                         <h1>Professional Objectives</h1>
-				<p>I’m pursuing opportunities as a business analyst, systems analyst, or IT operations specialist—roles where I can leverage my background in leadership, operations, and digital transformation to improve how organizations work. I’m especially drawn to positions that bridge business needs with technical solutions, enabling teams to work more efficiently and make informed decisions.</p>
-				<p>Looking ahead, I plan to pursue a full-time MBA to strengthen my business acumen, expand my strategic skillset, and prepare for a long-term career at the intersection of business and technology. My goal is to help mission-driven organizations use technology more effectively to deliver impact, improve operations, and support long-term innovation.</p>
+                        <p>Following my transition from military service in the fall of 2026, I’m seeking internships or fellowships in roles such as business analyst, systems analyst, or IT solutions specialist, where I can develop both my business & technical skill sets and gain hands-on experience.</p>
 
-                    </div>
+                        <p>I plan to pursue a full-time MBA starting in the fall of 2027 to strengthen my business acumen and develop as a strategic leader. Post-MBA, my current goal is to move into public-sector consulting, with a focus on helping mission-driven organizations leverage technology to improve operations, scale their impact, and drive sustainable innovation.</p>                        
+
+                </div>
+
                     <div class="tile-container">
-                        <div class="tile-container-tile-mini" onclick="navigateToURL('resume.html');">
-                            <h1>Resume</h1>
-                        </div>
-                        <div class="tile-container-tile-mini" onclick="navigateToURL('contact.html');">
-                            <h1>Contact Information</h1>
+                        <div class="tile-container-tile-mini">
+                            <a href="./downloads/resume.pdf" class="link-remove-format" target="_blank" rel="noopener noreferrer" title="View my resume (PDF)"><h1>Resume</h1></a>
                         </div>
                         <div class="tile-container-tile-mini" onclick="navigateToURL('projects.html');">
                             <h1>Projects</h1>
+                        </div>
+                        <div class="tile-container-tile-mini" onclick="navigateToURL('insights.html');">
+                            <h1>Insights</h1>
                         </div>
                     </div>
                 </div>
