@@ -5,24 +5,22 @@
       "date": "10 April 2025",
       "category": "Career Transition",
       "keywords": ["Military", "AI tools", "Planning"],
-      "blurb": "Leveraging tools like ChatGPT can make the transition from military to tech more focused and strategic. Here’s how I’m using it to refine my goals, map out certification paths, and clarify next steps during my pivot.",
-    }
-
+      "blurb": "Leveraging tools like ChatGPT can make the transition from military to tech more focused and strategic. Here’s how I’m using it to refine my goals, map out certification paths, and clarify next steps during my pivot."
+    },
     {
-        "id": "post2",
-        "title": "How I’m Using ChatGPT for My Career Pivot",
-        "date": "10 April 2025",
-        "category": "Career Transition",
-        "keywords": ["Military", "AI tools", "Planning"],
-        "blurb": "Leveraging tools like ChatGPT can make the transition from military to tech more focused and strategic. Here’s how I’m using it to refine my goals, map out certification paths, and clarify next steps during my pivot.",
-      }
-
-      {
-        "id": "post3",
-        "title": "How I’m Using ChatGPT for My Career Pivot",
-        "date": "10 April 2025",
-        "category": "Career Transition",
-        "keywords": ["Military", "AI tools", "Planning"],
-        "blurb": "Leveraging tools like ChatGPT can make the transition from military to tech more focused and strategic. Here’s how I’m using it to refine my goals, map out certification paths, and clarify next steps during my pivot.",
-      }
+      "id": "post2",
+      "title": "How I’m Using ChatGPT for My Career Pivot",
+      "date": "10 April 2025",
+      "category": "Career Transition",
+      "keywords": ["Military", "AI tools", "Planning"],
+      "blurb": "Leveraging tools like ChatGPT can make the transition from military to tech more focused and strategic. Here’s how I’m using it to refine my goals, map out certification paths, and clarify next steps during my pivot."
+    },
+    {
+      "id": "post3",
+      "title": "How I’m Using ChatGPT for My Career Pivot",
+      "date": "10 April 2025",
+      "category": "Career Transition",
+      "keywords": ["Military", "AI tools", "Planning"],
+      "blurb": "Leveraging tools like ChatGPT can make the transition from military to tech more focused and strategic. Here’s how I’m using it to refine my goals, map out certification paths, and clarify next steps during my pivot."
+    }
   ]
