@@ -1,14 +1,20 @@
+// Load blog posts and render them in the static tile layout
 fetch('./data/posts.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch posts.json");
+    }
+    return response.json();
+  })
   .then(posts => {
     const container = document.getElementById('blog-section');
 
     posts.forEach((post, index) => {
-      // Create content-divider wrapper
-      const dividerWrapper = document.createElement('div');
-      dividerWrapper.className = 'content-divider';
+      // Create outer layout wrapper
+      const divider = document.createElement('div');
+      divider.className = 'content-divider';
 
-      // Create blog tile content
+      // Inner content tile
       const wrapper = document.createElement('div');
       wrapper.className = 'content-body';
 
@@ -22,18 +28,25 @@ fetch('./data/posts.json')
             <h1>${post.date}</h1>
             <h3>${post.category}</h3>
             <p><strong>Keywords:</strong> ${post.keywords.join(', ')}</p>
+            <!-- Optional: <button onclick="openBlogModal('${post.id}')">Read More</button> -->
           </div>
         </div>
       `;
 
-      dividerWrapper.appendChild(wrapper);
-      container.appendChild(dividerWrapper);
+      // Append content-body to content-divider
+      divider.appendChild(wrapper);
 
-      // Add a line break after the post, if it's not the last one
+      // Append the complete post block to the container
+      container.appendChild(divider);
+
+      // Add spacer between posts (but not after last one)
       if (index < posts.length - 1) {
         const spacer = document.createElement('div');
         spacer.className = 'page-break-thin';
         container.appendChild(spacer);
       }
     });
+  })
+  .catch(error => {
+    console.error("Error loading blog posts:", error);
   });
