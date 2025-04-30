@@ -26,7 +26,7 @@ fetch('https://portfolio-insights-api.way-caleb.workers.dev/posts')
           <div class="tile">
             <h1>${post.date}</h1>
             <h3>${post.category}</h3>
-            <p><strong>Keywords:</strong> ${JSON.parse(post.keywords).join(', ')}</p>
+            <p><strong>Keywords:</strong> ${post.keywords.join(', ')}</p>
           </div>
         </div>
       `;
