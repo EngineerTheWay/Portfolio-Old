@@ -1,5 +1,5 @@
-// Load blog posts and render them in the static tile layout
-fetch('./data/posts.json')
+// Load blog posts via cloudflare worker API and render them in the static tile layout
+fetch('https://portfolio-insights-api.way-caleb.workers.dev/posts')
   .then(response => {
     if (!response.ok) {
       throw new Error("Failed to fetch posts.json");
@@ -26,7 +26,7 @@ fetch('./data/posts.json')
           <div class="tile">
             <h1>${post.date}</h1>
             <h3>${post.category}</h3>
-            <p><strong>Keywords:</strong> ${post.keywords.join(', ')}</p>
+            <p><strong>Keywords:</strong> ${JSON.parse(post.keywords).join(', ')}</p>
           </div>
         </div>
       `;
