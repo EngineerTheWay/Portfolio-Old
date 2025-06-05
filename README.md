@@ -1,8 +1,19 @@
-This was my first portfolio website and an early project that helped me build foundational development skills. I started it from scratch while learning through The Odin Project a few years ago and worked on it on and off over the years. It was a project where I explored:
-CSS container design elements
-Basic JavaScript interactivity
-Basic API integration using Cloudflare Workers and a SQLite database
+## Overview ##
 
-While my goal wasn’t to get into web development, I wanted to get comfortable creating my own site and understand the basics of front-end development. This project taught me a lot about structuring code, container-based design, and integrating a basic API.
+This was my first portfolio website and an early project that helped me build foundational development skills. I built it from scratch while learning through The Odin Project and Codecademy, returning to it on and off over the years as a personal sandbox for experimenting and learning.
 
+Although I had prior experience with GitHub from game server development, this project helped me deepen my understanding of Git features like squashing commits and running terminal commands to manage version control more effectively.
 
+## Key Features & Purpose ##
+
+The goal of this project was to get comfortable creating a website from the ground up and to understand the basics of front-end development—not to become a full-time web developer. It gave me hands-on experience structuring code and working through the fundamentals of modern web design.
+
+## What I Built ##
+
+CSS container-based layout and design
+Basic JavaScript interactivity for UI behavior
+Simple API integration using Cloudflare Workers and SQLite
+
+## Why I Migrated ##
+
+As I began to write more and wanted to update content more frequently, I decided to shift to a more scalable setup. I migrated to a Next.js-based portfolio site with Notion as a headless CMS to simplify content management and reduce the need for code commits during updates.
