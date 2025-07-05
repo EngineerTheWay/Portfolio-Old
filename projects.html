@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caleb - Contact Info</title>
+    <title>Caleb - Projects</title>
 	<!-- Normalize CSS  -->
 	<link rel="stylesheet" href="./css/normalize.css">
     <!-- Stylesheet  -->
@@ -33,9 +33,9 @@
         <nav class="header-center">
             <ul>
                 <li class="navbar"><a href="index.html">About</a></li>
-                <li class="navbar"><a href="projects.html">Projects</a></li>
+                <li class="navbar"><a class="navbar active" href="projects.html">Projects</a></li>
                 <li class="navbar"><a href="insights.html">Insights</a></li>
-                <li class="navbar"><a class="navbar active" href="contact.html">Contact</a></li>
+                <li class="navbar"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -63,9 +63,9 @@
             <nav class="mobile-menu">
                 <ul>
                     <li class="mobile-navbar"><a href="index.html">About</a></li>
-                    <li class="mobile-navbar"><a href="projects.html">Projects</a></li>
+                    <li class="mobile-navbar"><a class="mobile-navbar active" href="projects.html">Projects</a></li>
                     <li class="mobile-navbar"><a href="insights.html">Insights</a></li>
-                    <li class="mobile-navbar"><a class="mobile-navbar active" href="contact.html">Contact</a></li>
+                    <li class="mobile-navbar"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,31 +75,28 @@
     <main>
 		<content>
 			<div class="content-divider">
-				<div><h1>Contact Information</h1></div>
-                
+				<div><h1>Projects</h1></div>
+
 				<div class="page-break"></div>
 
+            </div>
+
+            <div class="content-divider">
+
+                <div><h2>Web Projects</h2></div>
+
+		        <div class="page-break-short"></div>
 
                 <div class="content-body">
-                    <div class="tile #no-pointer">
-                        <h1>Contact Information</h1>
-                        <p><span class="bold">Email:</span> contact@calebway.io</p>
-                    </div>
-                    <div class="tile-container">
-                        <div class="tile-container-tile-mini">
-                            <a href="./downloads/resume.pdf" class="link-remove-format" target="_blank" rel="noopener noreferrer" title="View my resume (PDF)"><h1>Resume</h1></a>
-                        </div>
-                        <div class="tile-container-tile-mini" onclick="openInNewTab('https://github.com/EngineerTheWay/');">
-                            <a href="https://github.com/EngineerTheWay" target="_blank" class="link-remove-format"><h1>Github</h1></a>
-                        </div>
-                        <div class="tile-container-tile-mini"  onclick="openInNewTab('https://www.linkedin.com/in/waycaleb/');">
-                            <a href="https://www.linkedin.com/in/caleb-way-51b202247/" target="_blank" class="link-remove-format"><h1>LinkedIn</h1></a>
-                        </div>
+                    <div class="tile" onclick="openInNewTab('https://github.com/EngineerTheWay/Portfolio');">
+                        <h1>Portfolio Site</h1>
+                        <p>View the source code of this portfolio website on my Github!</p>
+                        <p>This project demonstrates my mastery of:</p>
+                        <p><span class="bold">HTML/CSS</span></p>
                     </div>
                 </div>
-			</div>
-	
-			
+            </div>
+
 		</content>
 	</main>
 
