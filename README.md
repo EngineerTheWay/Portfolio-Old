@@ -13,7 +13,3 @@ The goal of this project was to get comfortable creating a website from the grou
 CSS container-based layout and design
 Basic JavaScript interactivity for UI behavior
 Simple API integration using Cloudflare Workers and SQLite
-
-## Why I Migrated ##
-
-As I began to write more and wanted to update content more frequently, I decided to shift to a more scalable setup. I migrated to a Next.js-based portfolio site with Notion as a headless CMS to simplify content management and reduce the need for code commits during updates.
