@@ -6,10 +6,10 @@ Although I had prior experience with GitHub from game server development, this p
 
 ## Key Features & Purpose ##
 
-The goal of this project was to get comfortable creating a website from the ground up and to understand the basics of front-end development—not to become a full-time web developer. It gave me hands-on experience structuring code and working through the fundamentals of modern web design.
+The goal of this project was to get comfortable creating a website from the ground up and to understand the basics of front-end web application development. It gave me hands-on with the fundamentals of containerized web design.
 
 ## What I Built ##
 
-CSS container-based layout and design
-Basic JavaScript interactivity for UI behavior
-Simple API integration using Cloudflare Workers and SQLite
+- CSS container-based layout and design
+- Basic JavaScript interactivity for UI behavior (primarily, the mobile hamburger)
+- Simple API integration using Cloudflare Workers and D1 Database (SQLite) to dynmaically generate insights pages
